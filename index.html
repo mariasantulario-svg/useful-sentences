@@ -3,248 +3,177 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#000B3D">
-<title>Useful sentences · Anglès Oral</title>
+<meta name="theme-color" content="#111111">
+<title>Useful sentences</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&display=swap" rel="stylesheet">
 <style>
   :root {
-    --navy: #000B3D;
-    --cream: #EBD9C1;
-    --slate: #696F8F;
-    --red: #AD4008;
-    --paper: #F7EFE3;
-    --ink: #0F1533;
+    --bg: #FFFFFF;
+    --ink: #111111;
+    --mute: #6B6B6B;
+    --line: #E6E6E6;
+    --lime: #C8F04B;
+    --violet: #5B3DF5;
+    --chip: #F2F2F2;
   }
   * { box-sizing: border-box; }
-  html, body { margin: 0; background: var(--paper); color: var(--ink); }
+  html, body { margin: 0; background: var(--bg); color: var(--ink); }
   body {
-    font-family: "Inter", system-ui, sans-serif;
-    font-weight: 500;
-    font-size: 17px;
-    line-height: 1.35;
+    font-family: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+    font-size: 18px; line-height: 1.3;
     -webkit-tap-highlight-color: transparent;
     padding-bottom: env(safe-area-inset-bottom);
   }
 
-  header {
-    background: var(--navy);
-    color: var(--cream);
-    padding: 18px 18px 14px;
-    position: sticky; top: 0; z-index: 3;
-  }
-  h1 {
-    font-family: "Fraunces", Georgia, serif;
-    font-weight: 700;
-    font-size: 26px;
-    letter-spacing: -0.01em;
-    margin: 0 0 2px;
-  }
-  header p { margin: 0; font-size: 13px; color: var(--cream); opacity: .8; }
+  header { padding: 22px 18px 10px; }
+  h1 { font-size: 30px; font-weight: 800; letter-spacing: -0.03em; margin: 0; }
+  h1 span { display: inline-block; background: var(--lime); padding: 0 6px; border-radius: 6px; }
+  header small { display: block; margin-top: 6px; font-size: 13px; color: var(--mute); font-weight: 600; }
 
-  .filters { padding: 12px 0 4px; background: var(--paper); position: sticky; top: 68px; z-index: 2; border-bottom: 1px solid #E2D4BF; }
-  .row { display: flex; gap: 8px; overflow-x: auto; padding: 4px 18px 8px; scrollbar-width: none; }
+  .filters { position: sticky; top: 0; z-index: 2; background: var(--bg); padding: 6px 0 2px; border-bottom: 1px solid var(--line); }
+  .label { font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--mute); padding: 6px 18px 2px; }
+  .row { display: flex; flex-wrap: nowrap; gap: 6px; overflow-x: auto; padding: 4px 18px 10px; scrollbar-width: none; }
   .row::-webkit-scrollbar { display: none; }
   .chip {
-    flex: 0 0 auto;
-    border: 1.5px solid var(--slate);
-    color: var(--ink);
-    background: transparent;
-    border-radius: 999px;
-    padding: 7px 14px;
-    font: inherit; font-size: 14px; font-weight: 600;
-    cursor: pointer;
+    flex: 0 0 auto; border: 0; border-radius: 10px;
+    background: var(--chip); color: var(--ink);
+    padding: 9px 13px; font: inherit; font-size: 14px; font-weight: 700; cursor: pointer;
   }
-  .chip[aria-pressed="true"] { background: var(--navy); border-color: var(--navy); color: var(--cream); }
-  .chip.fn[aria-pressed="true"] { background: var(--red); border-color: var(--red); }
-  .chip:focus-visible { outline: 3px solid var(--red); outline-offset: 2px; }
+  .chip[aria-pressed="true"] { background: var(--ink); color: #fff; }
+  .row.fn .chip[aria-pressed="true"] { background: var(--violet); }
+  .chip:focus-visible { outline: 3px solid var(--violet); outline-offset: 2px; }
 
-  main { padding: 6px 0 40px; }
-  .group-title {
-    font-family: "Fraunces", Georgia, serif;
-    font-weight: 600; font-size: 15px;
-    color: var(--slate);
-    margin: 18px 18px 6px;
-  }
-  ul { list-style: none; margin: 0; padding: 0; }
-  li { border-top: 1px solid #E2D4BF; }
-  li:last-child { border-bottom: 1px solid #E2D4BF; }
+  main { padding: 8px 12px 48px; }
+  .lesson { margin: 18px 6px 8px; font-size: 13px; font-weight: 700; color: var(--mute); }
+  .lesson b { color: var(--ink); }
+  ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
   .say {
-    width: 100%;
-    display: flex; align-items: center; gap: 14px;
-    background: transparent; border: 0;
-    padding: 15px 18px;
-    text-align: left;
-    font: inherit; color: inherit;
-    cursor: pointer;
-    min-height: 60px;
+    width: 100%; display: flex; align-items: center; gap: 12px;
+    background: #fff; border: 2px solid var(--ink); border-radius: 14px;
+    padding: 12px 12px 12px 14px; text-align: left;
+    font: inherit; font-weight: 500; color: inherit; cursor: pointer; min-height: 64px;
+    box-shadow: 4px 4px 0 var(--ink);
+    transition: transform .08s, box-shadow .08s;
   }
-  .say:active, .say.playing { background: #F0E3CE; }
-  .say:focus-visible { outline: 3px solid var(--red); outline-offset: -3px; }
-  .mark {
-    flex: 0 0 auto;
-    width: 12px; height: 12px; border-radius: 50%;
-    background: var(--red);
-    transition: transform .15s;
-  }
-  .say.playing .mark { transform: scale(1.5); }
+  .say:active { transform: translate(3px, 3px); box-shadow: 1px 1px 0 var(--ink); }
+  .say.playing { background: var(--lime); }
+  .say:focus-visible { outline: 3px solid var(--violet); outline-offset: 3px; }
   .text { flex: 1; }
-  .tag { display: block; font-size: 12px; color: var(--slate); margin-top: 3px; }
-
-  .empty { margin: 40px 18px; color: var(--slate); }
-  .note { margin: 20px 18px 0; font-size: 12px; color: var(--slate); }
-  @media (prefers-reduced-motion: reduce) { .mark { transition: none; } }
+  .fn { display: block; font-size: 12px; color: var(--mute); font-weight: 700; margin-top: 2px; }
+  .play {
+    flex: 0 0 auto; width: 38px; height: 38px; border-radius: 50%;
+    background: var(--ink); position: relative;
+  }
+  .play::after {
+    content: ""; position: absolute; left: 15px; top: 11px;
+    border-left: 12px solid #fff; border-top: 8px solid transparent; border-bottom: 8px solid transparent;
+  }
+  .say.playing .play { background: var(--violet); }
+  .empty { margin: 40px 6px; color: var(--mute); }
 </style>
 </head>
 <body>
 
 <header>
-  <h1>Useful sentences</h1>
-  <p>Tap a sentence to hear it. Then say it.</p>
+  <h1><span>Useful</span> sentences</h1>
+  <small>tap · listen · say it</small>
 </header>
 
 <div class="filters">
-  <div class="row" id="unitRow" aria-label="Unit"></div>
-  <div class="row" id="fnRow" aria-label="Function"></div>
+  <div class="label">Topic</div>
+  <div class="row" id="topicRow"></div>
+  <div class="label">I want to...</div>
+  <div class="row fn" id="fnRow"></div>
 </div>
 
-<main>
-  <div id="list"></div>
-</main>
+<main><div id="list"></div></main>
 
 <script src="frases.js"></script>
 <script>
 (function () {
-  const unitRow = document.getElementById('unitRow');
+  const topicRow = document.getElementById('topicRow');
   const fnRow = document.getElementById('fnRow');
   const list = document.getElementById('list');
+  let topic = 'all', fn = 'all';
 
-  let unit = 'all';
-  let fn = 'all';
+  const topicsOf = s => LESSONS[s.lesson] || [];
+  const allTopics = [...new Set(Object.values(LESSONS).flat())];
 
-  // Chips
-  function chip(label, value, row, cls) {
+  function chip(label, value, row) {
     const b = document.createElement('button');
-    b.className = 'chip' + (cls ? ' ' + cls : '');
-    b.textContent = label;
-    b.dataset.value = String(value);
-    b.setAttribute('aria-pressed', 'false');
-    row.appendChild(b);
-    return b;
+    b.className = 'chip'; b.textContent = label; b.dataset.value = value;
+    b.setAttribute('aria-pressed', 'false'); row.appendChild(b);
   }
-  const unitNums = [...new Set(SENTENCES.map(s => s.unit))].sort((a, b) => a - b);
-  chip('All units', 'all', unitRow);
-  unitNums.forEach(u => chip('Unit ' + u, u, unitRow));
-  chip('All functions', 'all', fnRow, 'fn');
-  FUNCTIONS.filter(f => SENTENCES.some(s => s.fn === f)).forEach(f => chip(f, f, fnRow, 'fn'));
+  chip('All', 'all', topicRow);
+  allTopics.forEach(t => chip(t, t, topicRow));
+  chip('Anything', 'all', fnRow);
+  FUNCTIONS.filter(f => SENTENCES.some(s => s.fn === f)).forEach(f => chip(f.replace(/^[A-Z]/, c => c.toLowerCase()), f, fnRow));
 
-  unitRow.addEventListener('click', e => {
-    const b = e.target.closest('.chip'); if (!b) return;
-    unit = b.dataset.value === 'all' ? 'all' : Number(b.dataset.value);
-    render();
-  });
-  fnRow.addEventListener('click', e => {
-    const b = e.target.closest('.chip'); if (!b) return;
-    fn = b.dataset.value;
-    render();
-  });
+  topicRow.addEventListener('click', e => { const b = e.target.closest('.chip'); if (!b) return; topic = b.dataset.value; render(); });
+  fnRow.addEventListener('click', e => { const b = e.target.closest('.chip'); if (!b) return; fn = b.dataset.value; render(); });
 
   // Audio: mp3 if present, browser voice otherwise
-  let currentAudio = null;
-  let voice = null;
+  let currentAudio = null, voice = null;
   function pickVoice() {
-    const voices = speechSynthesis.getVoices();
-    if (!voices.length) return;
-    const gb = voices.filter(v => /en-GB/i.test(v.lang));
-    voice = gb.find(v => /Daniel|Google UK English Female|Google UK English Male|Serena|Kate|Arthur|Martha/i.test(v.name))
-         || gb[0]
-         || voices.find(v => /^en/i.test(v.lang))
-         || null;
+    const v = speechSynthesis.getVoices(); if (!v.length) return;
+    const gb = v.filter(x => /en-GB/i.test(x.lang));
+    voice = gb.find(x => /Daniel|Google UK English|Serena|Kate|Arthur|Martha/i.test(x.name)) || gb[0] || v.find(x => /^en/i.test(x.lang)) || null;
   }
-  if ('speechSynthesis' in window) {
-    pickVoice();
-    speechSynthesis.onvoiceschanged = pickVoice;
-  }
+  if ('speechSynthesis' in window) { pickVoice(); speechSynthesis.onvoiceschanged = pickVoice; }
 
   function stopAll() {
     if (currentAudio) { currentAudio.pause(); currentAudio = null; }
     if ('speechSynthesis' in window) speechSynthesis.cancel();
     document.querySelectorAll('.say.playing').forEach(el => el.classList.remove('playing'));
   }
-
-  function play(sentence, btn) {
-    stopAll();
-    btn.classList.add('playing');
-    const done = () => btn.classList.remove('playing');
-    if (sentence.mp3) {
-      currentAudio = new Audio('audio/' + sentence.mp3);
-      currentAudio.onended = done;
-      currentAudio.onerror = () => { currentAudio = null; speak(sentence.en, done); };
-      currentAudio.play().catch(() => speak(sentence.en, done));
-    } else {
-      speak(sentence.en, done);
-    }
-  }
-
   function speak(text, done) {
     if (!('speechSynthesis' in window)) { done(); return; }
     const u = new SpeechSynthesisUtterance(text);
-    u.lang = 'en-GB';
-    if (voice) u.voice = voice;
-    u.rate = 0.92;
-    u.onend = done; u.onerror = done;
-    speechSynthesis.speak(u);
+    u.lang = 'en-GB'; if (voice) u.voice = voice; u.rate = 0.92;
+    u.onend = done; u.onerror = done; speechSynthesis.speak(u);
+  }
+  function play(s, btn) {
+    stopAll(); btn.classList.add('playing');
+    const done = () => btn.classList.remove('playing');
+    if (s.mp3) {
+      currentAudio = new Audio('audio/' + s.mp3);
+      currentAudio.onended = done;
+      currentAudio.onerror = () => { currentAudio = null; speak(s.en, done); };
+      currentAudio.play().catch(() => speak(s.en, done));
+    } else speak(s.en, done);
   }
 
-  // List
   function render() {
-    unitRow.querySelectorAll('.chip').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.value === String(unit))));
+    topicRow.querySelectorAll('.chip').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.value === topic)));
     fnRow.querySelectorAll('.chip').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.value === fn)));
 
-    const items = SENTENCES.filter(s => (unit === 'all' || s.unit === unit) && (fn === 'all' || s.fn === fn));
+    const items = SENTENCES.filter(s => (topic === 'all' || topicsOf(s).includes(topic)) && (fn === 'all' || s.fn === fn));
     list.innerHTML = '';
-    if (!items.length) {
-      list.innerHTML = '<p class="empty">No sentences here yet. Try another unit or function.</p>';
-      return;
-    }
+    if (!items.length) { list.innerHTML = '<p class="empty">Nothing here yet.</p>'; return; }
 
-    // Group by function when a unit is chosen, by unit when a function is chosen, by unit then function otherwise
     const groups = new Map();
-    items.forEach(s => {
-      let key;
-      if (unit !== 'all' && fn !== 'all') key = 'Unit ' + s.unit + ', session ' + s.session;
-      else if (unit !== 'all') key = s.fn;
-      else key = 'Unit ' + s.unit + (UNITS[s.unit] ? ': ' + UNITS[s.unit] : '');
-      if (!groups.has(key)) groups.set(key, []);
-      groups.get(key).push(s);
-    });
+    items.forEach(s => { if (!groups.has(s.lesson)) groups.set(s.lesson, []); groups.get(s.lesson).push(s); });
 
-    groups.forEach((arr, key) => {
+    groups.forEach((arr, lesson) => {
       const h = document.createElement('div');
-      h.className = 'group-title';
-      h.textContent = key;
+      h.className = 'lesson';
+      h.innerHTML = 'Lesson · <b></b>'; h.querySelector('b').textContent = lesson;
       list.appendChild(h);
       const ul = document.createElement('ul');
       arr.forEach(s => {
         const li = document.createElement('li');
         const b = document.createElement('button');
         b.className = 'say';
-        b.innerHTML = '<span class="mark" aria-hidden="true"></span><span class="text"></span>';
+        b.innerHTML = '<span class="text"></span><span class="play" aria-hidden="true"></span>';
         b.querySelector('.text').textContent = s.en;
-        if (unit === 'all' || fn === 'all') {
-          const tag = document.createElement('span');
-          tag.className = 'tag';
-          tag.textContent = (unit !== 'all' ? '' : s.fn + ' · ') + 'Session ' + s.session;
-          b.querySelector('.text').appendChild(tag);
-        }
+        if (fn === 'all') { const t = document.createElement('span'); t.className = 'fn'; t.textContent = s.fn; b.querySelector('.text').appendChild(t); }
         b.addEventListener('click', () => play(s, b));
-        li.appendChild(b);
-        ul.appendChild(li);
+        li.appendChild(b); ul.appendChild(li);
       });
       list.appendChild(ul);
     });
   }
-
   render();
 })();
 </script>
