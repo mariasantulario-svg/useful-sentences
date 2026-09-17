@@ -71,6 +71,16 @@
   }
   .say.playing .play { background: var(--violet); }
   .empty { margin: 40px 6px; color: var(--mute); }
+
+  /* Embed mode: one Notion toggle = one screen (?block=stars-2) */
+  body.embed header, body.embed .filters { display: none; }
+  body.embed main { padding: 4px 10px 14px; }
+  body.embed .group { margin: 12px 4px 8px; font-size: 13px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--violet); }
+  body.embed .group:first-child { margin-top: 6px; }
+  body.embed ul { grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 10px 12px; padding-right: 4px; }
+  body.embed li { display: flex; }
+  body.embed .say { font-size: 19px; min-height: 58px; padding: 10px 10px 10px 14px; }
+  body.embed .hint { margin: 2px 4px 0; font-size: 12px; font-weight: 700; color: var(--mute); }
 </style>
 </head>
 <body>
@@ -97,8 +107,12 @@
   const list = document.getElementById('list');
   let topic = 'all', fn = 'all';
 
-  const topicsOf = s => LESSONS[s.lesson] || [];
-  const allTopics = [...new Set(Object.values(LESSONS).flat())];
+  const topicsOf = s => s.topics || [];
+  const known = (typeof TOPICS !== 'undefined') ? TOPICS : [];
+  const used = [...new Set(SENTENCES.flatMap(topicsOf))];
+  const allTopics = [...known.filter(t => used.includes(t)), ...used.filter(t => !known.includes(t))];
+  const fnOrder = [...FUNCTIONS, ...new Set(SENTENCES.map(s => s.fn).filter(f => !FUNCTIONS.includes(f)))];
+  const inTopic = s => topic === 'all' || topicsOf(s).includes(topic);
 
   function chip(label, value, row) {
     const b = document.createElement('button');
@@ -107,10 +121,18 @@
   }
   chip('All', 'all', topicRow);
   allTopics.forEach(t => chip(t, t, topicRow));
-  chip('Anything', 'all', fnRow);
-  FUNCTIONS.filter(f => SENTENCES.some(s => s.fn === f)).forEach(f => chip(f.replace(/^[A-Z]/, c => c.toLowerCase()), f, fnRow));
+  // The "Useful for..." row only offers the functions that exist in the chosen topic
+  function buildFnRow() {
+    fnRow.innerHTML = '';
+    chip('Anything', 'all', fnRow);
+    const avail = fnOrder.filter(f => SENTENCES.some(s => s.fn === f && inTopic(s)));
+    avail.forEach(f => chip(f.replace(/^[A-Z]/, c => c.toLowerCase()), f, fnRow));
+    if (fn !== 'all' && !avail.includes(fn)) fn = 'all';
+    fnRow.scrollLeft = 0;
+  }
+  buildFnRow();
 
-  topicRow.addEventListener('click', e => { const b = e.target.closest('.chip'); if (!b) return; topic = b.dataset.value; render(); });
+  topicRow.addEventListener('click', e => { const b = e.target.closest('.chip'); if (!b) return; topic = b.dataset.value; buildFnRow(); render(); });
   fnRow.addEventListener('click', e => { const b = e.target.closest('.chip'); if (!b) return; fn = b.dataset.value; render(); });
 
   // Audio: mp3 if present, browser voice otherwise
@@ -131,7 +153,8 @@
     if (!('speechSynthesis' in window)) { done(); return; }
     const u = new SpeechSynthesisUtterance(text);
     u.lang = 'en-GB'; if (voice) u.voice = voice; u.rate = 0.92;
-    u.onend = done; u.onerror = done; speechSynthesis.speak(u);
+    u.onend = done; u.onerror = done;
+    setTimeout(() => speechSynthesis.speak(u), 60);
   }
   function play(s, btn) {
     stopAll(); btn.classList.add('playing');
@@ -144,11 +167,39 @@
     } else speak(s.en, done);
   }
 
+  function sayButton(s, showFn) {
+    const b = document.createElement('button');
+    b.className = 'say';
+    b.innerHTML = '<span class="text"></span><span class="play" aria-hidden="true"></span>';
+    b.querySelector('.text').textContent = s.en;
+    if (showFn) { const t = document.createElement('span'); t.className = 'fn'; t.textContent = s.fn; b.querySelector('.text').appendChild(t); }
+    b.addEventListener('click', () => play(s, b));
+    return b;
+  }
+
+  // Embed mode: index.html?block=stars-2 (several blocks: ?block=stars-2,stars-3)
+  const wanted = (new URLSearchParams(location.search).get('block') || '').split(',').map(x => x.trim()).filter(Boolean);
+  if (wanted.length) {
+    document.body.classList.add('embed');
+    const items = SENTENCES.filter(s => wanted.includes(s.block));
+    if (!items.length) { list.innerHTML = '<p class="empty">Nothing here yet.</p>'; return; }
+    const groups = new Map();
+    items.forEach(s => { if (!groups.has(s.fn)) groups.set(s.fn, []); groups.get(s.fn).push(s); });
+    groups.forEach((arr, name) => {
+      const h = document.createElement('div'); h.className = 'group'; h.textContent = name; list.appendChild(h);
+      const ul = document.createElement('ul');
+      arr.forEach(s => { const li = document.createElement('li'); li.appendChild(sayButton(s, false)); ul.appendChild(li); });
+      list.appendChild(ul);
+    });
+    const hint = document.createElement('p'); hint.className = 'hint'; hint.textContent = 'tap · listen · say it'; list.appendChild(hint);
+    return;
+  }
+
   function render() {
     topicRow.querySelectorAll('.chip').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.value === topic)));
     fnRow.querySelectorAll('.chip').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.value === fn)));
 
-    const items = SENTENCES.filter(s => (topic === 'all' || topicsOf(s).includes(topic)) && (fn === 'all' || s.fn === fn));
+    const items = SENTENCES.filter(s => inTopic(s) && (fn === 'all' || s.fn === fn));
     list.innerHTML = '';
     if (!items.length) { list.innerHTML = '<p class="empty">Nothing here yet.</p>'; return; }
 
@@ -163,13 +214,7 @@
       const ul = document.createElement('ul');
       arr.forEach(s => {
         const li = document.createElement('li');
-        const b = document.createElement('button');
-        b.className = 'say';
-        b.innerHTML = '<span class="text"></span><span class="play" aria-hidden="true"></span>';
-        b.querySelector('.text').textContent = s.en;
-        if (fn === 'all') { const t = document.createElement('span'); t.className = 'fn'; t.textContent = s.fn; b.querySelector('.text').appendChild(t); }
-        b.addEventListener('click', () => play(s, b));
-        li.appendChild(b); ul.appendChild(li);
+        li.appendChild(sayButton(s, fn === 'all')); ul.appendChild(li);
       });
       list.appendChild(ul);
     });
