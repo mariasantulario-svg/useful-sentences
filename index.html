@@ -82,9 +82,13 @@
   body.embed .say { font-size: 19px; min-height: 58px; padding: 10px 10px 10px 14px; }
   body.embed .hint { margin: 2px 4px 0; font-size: 12px; font-weight: 700; color: var(--mute); }
 </style>
+<link rel="stylesheet" href="lesson.css">
 </head>
 <body>
 
+<div id="viewLesson"></div>
+
+<div id="viewSentences">
 <header>
   <h1><span>Useful</span> sentences</h1>
   <small>tap · listen · say it</small>
@@ -98,6 +102,9 @@
 </div>
 
 <main><div id="list"></div></main>
+</div>
+
+<nav class="tabbar"><a id="tabLesson" href="#/">Lesson</a><a id="tabSent" href="#/sentences">All sentences</a></nav>
 
 <script src="frases.js"></script>
 <script>
@@ -181,6 +188,8 @@
     return b;
   }
 
+  window.US = { sayButton, stopAll };
+
   // Embed mode: index.html?block=stars-2 (several blocks: ?block=stars-2,stars-3)
   const wanted = (new URLSearchParams(location.search).get('block') || '').split(',').map(x => x.trim()).filter(Boolean);
   if (wanted.length) {
@@ -226,5 +235,7 @@
   render();
 })();
 </script>
+<script src="lessons.js"></script>
+<script src="lesson.js"></script>
 </body>
 </html>
