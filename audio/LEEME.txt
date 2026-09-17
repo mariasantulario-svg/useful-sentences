@@ -1,0 +1,1 @@
+Un mp3 por frase. Nombre = la frase en minusculas con guiones (That's so you! -> thats-so-you.mp3). Voz britanica generada el 17-09-2026.
