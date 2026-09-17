@@ -1,0 +1,1 @@
+Audios originales de ElevenLabs, un archivo por bloque de frases. De aqui se cortan los mp3 de audio/.
