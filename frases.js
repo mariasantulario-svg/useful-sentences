@@ -7,7 +7,9 @@
 //    topics: temas de ESA frase. [] = frase transversal: solo sale en All y por funcion
 //    block:  desplegable de Notion donde aparece (opcional).
 //            La pantalla de ese desplegable es  .../useful-sentences/?block=stars-2
-//    mp3:    archivo dentro de audio/ (opcional). Sin mp3, la lee la voz del navegador.
+//    mp3:    normalmente NO hace falta. La app busca sola audio/<frase-en-minusculas-con-guiones>.mp3
+//            ("That's so you!" -> audio/thats-so-you.mp3). Usa mp3: solo si el archivo se llama de otra forma.
+//            Si no hay mp3, lee la voz inglesa del dispositivo; si el dispositivo no tiene voz inglesa, no suena.
 //
 // Un tema nuevo o una funcion nueva aparecen solos en los filtros al usarlos aqui.
 

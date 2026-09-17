@@ -140,7 +140,7 @@
   function pickVoice() {
     const v = speechSynthesis.getVoices(); if (!v.length) return;
     const gb = v.filter(x => /en-GB/i.test(x.lang));
-    voice = gb.find(x => /Daniel|Google UK English|Serena|Kate|Arthur|Martha/i.test(x.name)) || gb[0] || v.find(x => /^en/i.test(x.lang)) || null;
+    voice = gb.find(x => /Daniel|Google UK English|Sonia|Libby|Serena|Kate|Arthur|Martha/i.test(x.name)) || gb[0] || v.find(x => /^en/i.test(x.lang)) || null;
   }
   if ('speechSynthesis' in window) { pickVoice(); speechSynthesis.onvoiceschanged = pickVoice; }
 
@@ -149,8 +149,11 @@
     if ('speechSynthesis' in window) speechSynthesis.cancel();
     document.querySelectorAll('.say.playing').forEach(el => el.classList.remove('playing'));
   }
+  // Same rule as the mp3 generator: "That's so you!" -> thats-so-you.mp3
+  const slug = t => t.toLowerCase().replace(/[\u2019']/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 60).replace(/-+$/, '');
   function speak(text, done) {
-    if (!('speechSynthesis' in window)) { done(); return; }
+    // Never read English with a non-English voice (a Spanish Windows voice sounds like a joke)
+    if (!('speechSynthesis' in window) || !voice) { done(); return; }
     const u = new SpeechSynthesisUtterance(text);
     u.lang = 'en-GB'; if (voice) u.voice = voice; u.rate = 0.92;
     u.onend = done; u.onerror = done;
@@ -159,12 +162,13 @@
   function play(s, btn) {
     stopAll(); btn.classList.add('playing');
     const done = () => btn.classList.remove('playing');
-    if (s.mp3) {
-      currentAudio = new Audio('audio/' + s.mp3);
-      currentAudio.onended = done;
-      currentAudio.onerror = () => { currentAudio = null; speak(s.en, done); };
-      currentAudio.play().catch(() => speak(s.en, done));
-    } else speak(s.en, done);
+    // Recorded mp3 first (audio/<slug>.mp3, or the file named in mp3:). Device voice only as a backup.
+    let fellBack = false;
+    const backup = () => { if (fellBack) return; fellBack = true; currentAudio = null; speak(s.en, done); };
+    currentAudio = new Audio('audio/' + (s.mp3 || slug(s.en) + '.mp3'));
+    currentAudio.onended = done;
+    currentAudio.onerror = backup;
+    currentAudio.play().catch(backup);
   }
 
   function sayButton(s, showFn) {
