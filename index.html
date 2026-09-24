@@ -44,6 +44,12 @@
   .row.fn .chip[aria-pressed="true"] { background: var(--violet); }
   .chip:focus-visible { outline: 3px solid var(--violet); outline-offset: 2px; }
 
+  .fbar { display: none; align-items: center; gap: 8px; padding: 8px 18px; font-size: 14px; font-weight: 700; cursor: pointer; }
+  .fbar b { background: var(--ink); color: #fff; border-radius: 8px; padding: 3px 8px; }
+  .fbar .fn { background: var(--violet); }
+  .fbar .arrow { margin-left: auto; color: var(--mute); font-weight: 400; }
+  .filters.collapsed .label, .filters.collapsed .row { display: none; }
+  .filters.collapsed .fbar { display: flex; }
   main { padding: 8px 12px 48px; }
   .lesson { margin: 18px 6px 8px; font-size: 13px; font-weight: 700; color: var(--mute); }
   .lesson b { color: var(--ink); }
@@ -95,6 +101,7 @@
 </header>
 
 <div class="filters">
+  <div class="fbar" id="fbar"><b id="fbTopic">All</b><b class="fn" id="fbFn">anything</b><span class="arrow">change ▾</span></div>
   <div class="label">Topic</div>
   <div class="row" id="topicRow"></div>
   <div class="label">Useful for...</div>
@@ -139,8 +146,17 @@
   }
   buildFnRow();
 
-  topicRow.addEventListener('click', e => { const b = e.target.closest('.chip'); if (!b) return; topic = b.dataset.value; buildFnRow(); render(); });
-  fnRow.addEventListener('click', e => { const b = e.target.closest('.chip'); if (!b) return; fn = b.dataset.value; render(); });
+  const filters = document.querySelector('.filters'), fbar = document.getElementById('fbar');
+  const small = () => window.matchMedia('(max-width: 700px)').matches;
+  function collapse() {
+    if (!small()) return;
+    document.getElementById('fbTopic').textContent = topic === 'all' ? 'All topics' : topic;
+    document.getElementById('fbFn').textContent = fn === 'all' ? 'anything' : fn.replace(/^[A-Z]/, c => c.toLowerCase());
+    filters.classList.add('collapsed');
+  }
+  fbar.addEventListener('click', () => filters.classList.remove('collapsed'));
+  topicRow.addEventListener('click', e => { const b = e.target.closest('.chip'); if (!b) return; topic = b.dataset.value; buildFnRow(); render(); if (topic !== 'all') collapse(); });
+  fnRow.addEventListener('click', e => { const b = e.target.closest('.chip'); if (!b) return; fn = b.dataset.value; render(); collapse(); });
 
   // Audio: mp3 if present, browser voice otherwise
   let currentAudio = null, voice = null;
