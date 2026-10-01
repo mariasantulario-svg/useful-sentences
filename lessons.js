@@ -1,7 +1,8 @@
 // Lessons for the Useful sentences app.
 // Cada leccion: actividades (en orden), extras y mazos de tarjetas. El Useful Language NO va aqui:
 // cada bloque {type:'useful', blocks:[...]} lo lee de frases.js por su campo block.
-// Tipos de bloque: text, note, teacher (solo con ?teacher=1), h, questions, useful, carousel, pick, deal, choose, video, gaps, match, elements, dialogue, flip.
+// Tipos de bloque: text, note, teacher (solo con ?teacher=1), h, questions, useful, carousel, pick, deal, choose, video, gaps, match, elements, dialogue, flip, list, reveal, audio.
+// flip admite labels: ["cara", "dorso"]; deal admite tag (rotulo de la tarjeta) y, en cada rol, head.
 
 const LESSONS_DATA = [
  {
@@ -1601,6 +1602,841 @@ const LESSONS_DATA = [
      "**Props:** scarf or shawl, a \"crystal ball\" (a mug or a glass), a telephone (your hand works)."
     ]
    }
+  }
+ },
+ {
+  "id": "fright",
+  "title": "Nine to Fright: Jobs and Tools on Screen",
+  "sub": "Speaking session · 2 hours",
+  "activities": [
+   {
+    "id": "1",
+    "title": "Listen. Where are you?",
+    "min": 5,
+    "blocks": [
+     {
+      "type": "teacher",
+      "md": "**Objetivo:** activar el tema sin nombrarlo. **1.** Ojos cerrados y zumbido (22 s), sin hablar. **2.** Pregunta 1 al aire; la 2 y la 3 en parejas, 2 min. **3.** Frase de Backrooms y mano alzada: _Would you open it?_ El tráiler, solo si sobra tiempo. _Todavía no se dice exhibition ni Halloween at the Tirant._"
+     },
+     {
+      "type": "text",
+      "md": "Close your eyes and listen. Don't say anything yet."
+     },
+     {
+      "type": "audio",
+      "src": "fright_hum.mp3"
+     },
+     {
+      "type": "questions",
+      "items": [
+       "Where are you? What time is it? Are you alone?",
+       "Have you ever worked somewhere like this at night? What did it sound like?",
+       "Why are empty workplaces so creepy at night?"
+      ]
+     },
+     {
+      "type": "note",
+      "md": "_Backrooms_ (2026) starts in a place like this. Clark owns a furniture store. One night, in the basement of his showroom, he finds a door that shouldn't be there. **Would you open it?**"
+     },
+     {
+      "type": "h",
+      "text": "Trailer (optional)"
+     },
+     {
+      "type": "video",
+      "youtube": "0HjdiohVOik"
+     },
+     {
+      "type": "useful",
+      "blocks": [
+       "fright-1"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "2",
+    "title": "Not a gun",
+    "min": 8,
+    "blocks": [
+     {
+      "type": "teacher",
+      "md": "**Objetivo:** llegar al concepto: herramientas de oficio, no armas. **1.** Pregunta 1 en plenario hasta que salga _none of them is a gun_. **2.** Parejas: ordenar las cuatro razones (2 min). **3.** Abre What a film expert says y deja la frase de Clover en la pizarra. **4.** Pregunta 3: soldadura y logística cuentan qué EPI llevan."
+     },
+     {
+      "type": "text",
+      "md": "Look at the six objects on the screen. You can find all of them at work: **work gloves, a chainsaw, a fire axe, a cordless drill, a syringe and a goalie mask.**"
+     },
+     {
+      "type": "questions",
+      "items": [
+       "What do these six objects have in common?",
+       "Why do horror villains use work tools and not guns? In pairs, put these reasons in order, from the most convincing to the least convincing."
+      ]
+     },
+     {
+      "type": "list",
+      "items": [
+       "A tool is familiar: we have one at home or at work.",
+       "It's quiet.",
+       "The villain has to get close.",
+       "The tool becomes part of the villain's body."
+      ]
+     },
+     {
+      "type": "questions",
+      "start": 3,
+      "items": [
+       "Which of these have you used at work? What protection did you wear?"
+      ]
+     },
+     {
+      "type": "reveal",
+      "title": "What a film expert says",
+      "lines": [
+       "\"Guns have no place in slasher films.\" Carol J. Clover, film expert, _Men, Women, and Chain Saws_ (1992). Her idea: horror villains prefer old, simple tools, like knives, axes and hammers, that work like an extension of the body. A gun is too clean and too far away."
+      ]
+     },
+     {
+      "type": "reveal",
+      "title": "Answer to question 1",
+      "lines": [
+       "They're all tools or protective equipment from real jobs. All six are famous in horror films. None of them is a gun."
+      ]
+     },
+     {
+      "type": "useful",
+      "blocks": [
+       "fright-2"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "3",
+    "title": "AT WORK / ON SCREEN",
+    "min": 12,
+    "blocks": [
+     {
+      "type": "teacher",
+      "md": "**Objetivo:** hipótesis en voz alta y léxico de oficios. Grupos de 3 o 4 mezclando ciclos: juego proyectado desde Notion, tarjetas del Word 03 o los dos match de esta pantalla. **Clave:** glove, welder or boilermaker, A Nightmare on Elm Street / chainsaw, forestry worker, The Texas Chain Saw Massacre / hockey mask, ice hockey goalkeeper, Friday the 13th Part III / pet in a gift box, shop assistant, Gremlins / animatronic mascot, animatronics technician, Five Nights at Freddy's / AI doll, toy company roboticist, M3GAN / furniture showroom, assistant manager, Backrooms / log truck, truck driver, Final Destination 2. _No describas la escena de Final Destination 2, es gráfica._"
+     },
+     {
+      "type": "text",
+      "md": "Groups of three or four. Match each object with a real job (**AT WORK**) and a film (**ON SCREEN**). Say your guesses out loud before you check."
+     },
+     {
+      "type": "h",
+      "text": "3.1 AT WORK: the real job"
+     },
+     {
+      "type": "match",
+      "pairs": [
+       [
+        "leather work glove",
+        "welder or boilermaker"
+       ],
+       [
+        "chainsaw",
+        "forestry worker"
+       ],
+       [
+        "pet in a gift box",
+        "shop assistant"
+       ],
+       [
+        "hockey mask",
+        "ice hockey goalkeeper"
+       ],
+       [
+        "animatronic mascot",
+        "animatronics technician"
+       ],
+       [
+        "AI doll",
+        "toy company roboticist"
+       ],
+       [
+        "log truck",
+        "truck driver"
+       ],
+       [
+        "furniture showroom",
+        "assistant manager"
+       ]
+      ]
+     },
+     {
+      "type": "h",
+      "text": "3.2 ON SCREEN: the film"
+     },
+     {
+      "type": "match",
+      "pairs": [
+       [
+        "leather work glove",
+        "A Nightmare on Elm Street (1984)"
+       ],
+       [
+        "chainsaw",
+        "The Texas Chain Saw Massacre (1974)"
+       ],
+       [
+        "pet in a gift box",
+        "Gremlins (1984)"
+       ],
+       [
+        "hockey mask",
+        "Friday the 13th Part III (1982)"
+       ],
+       [
+        "animatronic mascot",
+        "Five Nights at Freddy's (2023)"
+       ],
+       [
+        "AI doll",
+        "M3GAN (2023)"
+       ],
+       [
+        "log truck",
+        "Final Destination 2 (2003)"
+       ],
+       [
+        "furniture showroom",
+        "Backrooms (2026)"
+       ]
+      ]
+     },
+     {
+      "type": "reveal",
+      "title": "Behind the films (open after checking)",
+      "lines": [
+       "**A Nightmare on Elm Street (1984):** The director wanted a glove that a boilermaker could make in a workshop.",
+       "**The Texas Chain Saw Massacre (1974):** The killer's family worked in a slaughterhouse.",
+       "**Friday the 13th Part III (1982):** A real piece of protective equipment for a sport.",
+       "**Gremlins (1984):** A pet that comes with three very strict rules.",
+       "**Five Nights at Freddy's (2023):** Mike takes a job as a night security guard at an old pizzeria.",
+       "**M3GAN (2023):** A roboticist builds an AI doll. The investors love the demo.",
+       "**Backrooms (2026):** A furniture store owner finds a strange door in the basement of his showroom.",
+       "**Final Destination 2 (2003):** A badly secured load of logs on a truck."
+      ]
+     },
+     {
+      "type": "questions",
+      "items": [
+       "Which screen job would you never take? Why?"
+      ]
+     },
+     {
+      "type": "useful",
+      "blocks": [
+       "fright-3"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "4",
+    "title": "The real worker behind the prop",
+    "min": 10,
+    "blocks": [
+     {
+      "type": "teacher",
+      "md": "**Objetivo:** especular y justificar (_must be, can't be_). Lector rotatorio; sin razón en inglés no hay punto. **Clave:** 1 T · 2 F · 3 F · 4 F · 5 T · 6 F · 7 T · 8 T. Si el grupo va lento, se salta esta actividad y se lee una _real story_ por objeto al corregir la 3."
+     },
+     {
+      "type": "text",
+      "md": "Groups of three or four. Take turns to be the reader. The reader reads a card aloud. Everyone says **TRUE** or **FALSE** and gives a reason: no reason, no point. Then the reader taps the card and reads the real story. One point for the right answer, and one point for the best reason."
+     },
+     {
+      "type": "flip",
+      "labels": [
+       "True or false?",
+       "The real story"
+      ],
+      "cards": [
+       [
+        "Card 1",
+        "The director of A Nightmare on Elm Street wanted a glove that a boilermaker could make.",
+        "TRUE. Wes Craven wanted a glove that someone with boilermaker skills could make. Special effects artist Jim Doyle built it with a leather work glove, copper plates and tubes, rivets and steak knives. There was one \"hero\" glove for close-ups and three more for action scenes."
+       ],
+       [
+        "Card 2",
+        "Jason wears his famous hockey mask in the first Friday the 13th film.",
+        "FALSE. The mask first appears in Part III (1982). Martin Sadoff, from the 3D effects team, brought a goalie mask from his car. It was real protective equipment for a sport."
+       ],
+       [
+        "Card 3",
+        "The animatronics in Five Nights at Freddy's (2023) were computer graphics.",
+        "FALSE. Jim Henson's Creature Shop built real animatronic puppets. Several puppeteers moved each character, and the team kept spare parts: up to six or twelve arms for one character."
+       ],
+       [
+        "Card 4",
+        "Backrooms (2026) was made with computer graphics only. There were no real sets.",
+        "FALSE. The crew built more than 30,000 square feet of sets on four sound stages in Vancouver. They used 37,000 square feet of wallpaper and 29,000 square feet of carpet."
+       ],
+       [
+        "Card 5",
+        "M3GAN, the AI doll, was played by a real child.",
+        "TRUE. Amie Donald, a child actress, played M3GAN. For some shots, Morot FX Studio built an animatronic puppet."
+       ],
+       [
+        "Card 6",
+        "The machines in Frankenstein's lab (1931) were built by a university scientist.",
+        "FALSE. A Hollywood electrician, Kenneth Strickfaden, built them. More than forty years later, the same machines appeared in the comedy Young Frankenstein (1974)."
+       ],
+       [
+        "Card 7",
+        "In The Shining, the crew had to use a stronger door because Jack Nicholson broke the first one too fast.",
+        "TRUE. The first door was easy to break, and Nicholson broke it too quickly. The crew had to use a real door."
+       ],
+       [
+        "Card 8",
+        "\"Remove child before folding\" is a real warning on a baby stroller.",
+        "TRUE. It's real. It appeared in the Wacky Warning Label Contest, which collects real warnings that sound obvious. Why do you think the company wrote it?"
+       ]
+      ]
+     },
+     {
+      "type": "useful",
+      "blocks": [
+       "fright-4"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "5",
+    "title": "Handle with care",
+    "min": 10,
+    "blocks": [
+     {
+      "type": "teacher",
+      "md": "**Objetivo:** comprender reglas y practicar el lenguaje de las advertencias. **1.** Tráiler: comprensión global. **2.** Audio una vez sin guion: cazan las tres reglas y la más importante. **3.** The midnight problem, 2 min de debate. **4.** Etiqueta en equipos. **Clave:** luz del sol, DANGER (lo mata); agua y comida después de medianoche, WARNING; CAUTION queda libre. Cuenta la justificación."
+     },
+     {
+      "type": "h",
+      "text": "5.1 Watch the trailer"
+     },
+     {
+      "type": "text",
+      "md": "What's the product? Who sells it? What goes wrong?"
+     },
+     {
+      "type": "video",
+      "youtube": "gd20j2Hb-0Y"
+     },
+     {
+      "type": "h",
+      "text": "5.2 Listen"
+     },
+     {
+      "type": "text",
+      "md": "A shop assistant is selling a very special pet. What are the three rules? Which one is the most important?"
+     },
+     {
+      "type": "audio",
+      "src": "fright_handle-with-care.mp3"
+     },
+     {
+      "type": "dialogue",
+      "title": "Script",
+      "lines": [
+       [
+        "ASSISTANT",
+        "Good evening! Can I help you?"
+       ],
+       [
+        "CUSTOMER",
+        "Yes, I'm looking for a present for my son. Something special. What's in that box?"
+       ],
+       [
+        "ASSISTANT",
+        "Ah, that's a mogwai. He's very rare. And very sweet."
+       ],
+       [
+        "CUSTOMER",
+        "He's lovely! How much is he?"
+       ],
+       [
+        "ASSISTANT",
+        "Two hundred euros. But before you buy him, there are three rules. You have to follow them."
+       ],
+       [
+        "CUSTOMER",
+        "Rules? For a pet?"
+       ],
+       [
+        "ASSISTANT",
+        "Yes. First, keep him away from bright light. Sunlight can kill him."
+       ],
+       [
+        "CUSTOMER",
+        "OK. No sunlight."
+       ],
+       [
+        "ASSISTANT",
+        "Second, never get him wet. Not even a drop of water."
+       ],
+       [
+        "CUSTOMER",
+        "So... no baths?"
+       ],
+       [
+        "ASSISTANT",
+        "No baths. And the most important rule: whatever you do, never feed him after midnight."
+       ],
+       [
+        "CUSTOMER",
+        "After midnight? What happens if I do?"
+       ],
+       [
+        "ASSISTANT",
+        "Trust me, you don't want to know. Make sure your son understands the rules."
+       ],
+       [
+        "CUSTOMER",
+        "Don't worry, he's very responsible. Can I pay by card?"
+       ],
+       [
+        "ASSISTANT",
+        "Of course. And remember: no light, no water, no food after midnight."
+       ],
+       [
+        "CUSTOMER",
+        "Got it. What could possibly go wrong?"
+       ]
+      ]
+     },
+     {
+      "type": "h",
+      "text": "5.3 The midnight problem"
+     },
+     {
+      "type": "text",
+      "md": "\"Never feed him after midnight.\" So... when **can** you feed him? Is it a good instruction?"
+     },
+     {
+      "type": "h",
+      "text": "5.4 Make the label"
+     },
+     {
+      "type": "text",
+      "md": "In your team, turn the three rules into a product label. Which rule is a **DANGER**, which is a **WARNING** and which is a **CAUTION**?"
+     },
+     {
+      "type": "list",
+      "items": [
+       "**DANGER:** it will cause death or serious injury.",
+       "**WARNING:** it could cause death or serious injury.",
+       "**CAUTION:** it could cause a minor injury."
+      ]
+     },
+     {
+      "type": "useful",
+      "blocks": [
+       "fright-5"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "6",
+    "title": "What could possibly go wrong?",
+    "min": 18,
+    "timers": [
+     [
+      "Prepare",
+      4
+     ],
+     [
+      "Your chain",
+      1
+     ]
+    ],
+    "blocks": [
+     {
+      "type": "teacher",
+      "md": "**Objetivo:** predecir con grados de probabilidad y encadenar consecuencias; en ventas, anticipar el mal uso de un producto. **1.** Modelo en voz alta (2 min). **2.** Cada grupo pulsa los dos botones: un producto y un cliente al azar. **3.** Cadena de cuatro eslabones (4 min). **4.** Puesta en común, menos de un minuto por grupo, y voto doble. **5.** Frase de mostrador: Ventas lleva la voz. _DUA: A2 con dos eslabones; B2 añade If..., ... will... y rebate otra cadena._"
+     },
+     {
+      "type": "text",
+      "md": "Groups of three. Tap the two buttons: you get a **product** (with three rules) and a **customer**. Predict what the customer will do and what will happen next. Build a chain of four links."
+     },
+     {
+      "type": "deal",
+      "tag": "Read the three rules",
+      "roles": [
+       {
+        "label": "Give us a product",
+        "head": "Your product",
+        "deck": "products",
+        "kind": "simple"
+       }
+      ]
+     },
+     {
+      "type": "deal",
+      "tag": "Who buys it?",
+      "roles": [
+       {
+        "label": "Give us a customer",
+        "head": "Your customer",
+        "deck": "customers",
+        "kind": "simple"
+       }
+      ]
+     },
+     {
+      "type": "list",
+      "items": [
+       "He's / She's **bound to** forget...",
+       "They're **most likely to** ignore the warning about...",
+       "I think they'll **probably**...",
+       "**And then**... will happen."
+      ]
+     },
+     {
+      "type": "reveal",
+      "title": "Your teacher's example",
+      "lines": [
+       "\"Imagine my neighbour buys a mogwai. He's bound to forget the midnight rule. His kids are most likely to ignore the warning about water. I think they'll probably give it a shower, and then there will be five of them.\""
+      ]
+     },
+     {
+      "type": "text",
+      "md": "Tell the class your chain in less than one minute. Then vote: **Which chain is the most likely to happen in real life? Which one would make the best horror film?**"
+     },
+     {
+      "type": "note",
+      "md": "**Last step:** you work at the shop. What will you say at the till to stop it? One sentence: \"Whatever you do, never...\" or \"Make sure you...\""
+     },
+     {
+      "type": "useful",
+      "blocks": [
+       "fright-6"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "7",
+    "title": "Post-credits scene",
+    "min": 18,
+    "timers": [
+     [
+      "Prepare",
+      5
+     ],
+     [
+      "Your team",
+      1
+     ]
+    ],
+    "blocks": [
+     {
+      "type": "teacher",
+      "md": "**Objetivo:** presentar una herramienta propia y entender la exposición. Equipos por ciclo (soldadura en dos): 5 min de preparación y 1 min por equipo. Después abre NOW SHOWING y HOW CAN YOU CONTRIBUTE? en el proyector. Exit ticket: una frase por persona; anota quién se apunta a qué."
+     },
+     {
+      "type": "h",
+      "text": "7.1 Your tool on screen"
+     },
+     {
+      "type": "text",
+      "md": "Work with people from your course. Choose **one** tool or object from your job, for example a welding torch, an angle grinder, a forklift, a pallet truck, a barcode scanner, a cash register or a shop mannequin. You have five minutes to prepare one minute:"
+     },
+     {
+      "type": "list",
+      "items": [
+       "**AT WORK:** What is it? What do you use it for? Give one safety rule.",
+       "**ON SCREEN:** Which film could it appear in? A real film or one you invent.",
+       "**THE REAL WORKER:** Who uses it? (Clue: you!)"
+      ]
+     },
+     {
+      "type": "reveal",
+      "hot": true,
+      "title": "NOW SHOWING (open it when your teacher says so)",
+      "lines": [
+       "What you have just done has a name: **AT WORK / ON SCREEN**",
+       "**Halloween at the Tirant** · an exhibition in the school hall · 26 to 30 October",
+       "Each stand shows one real tool from one professional family: how professionals use it **AT WORK**, what horror films do with it **ON SCREEN**, and **the real worker behind the prop**.",
+       "**Wood and Furniture** · AT WORK: chainsaw, axe · ON SCREEN: The Texas Chain Saw Massacre, The Shining",
+       "**Welding and Boilermaking** · AT WORK: the bladed glove, protective equipment · ON SCREEN: A Nightmare on Elm Street",
+       "**Electricity** · AT WORK: wiring, drill · ON SCREEN: Frankenstein, The Slumber Party Massacre",
+       "**Health** · AT WORK: syringe, laboratory · ON SCREEN: Re-Animator, Misery",
+       "**Risk Prevention** · AT WORK: protective equipment, safety signs · ON SCREEN: Final Destination, Friday the 13th",
+       "**Retail and Marketing** · AT WORK: packaging, product instructions · ON SCREEN: Gremlins",
+       "**Administration · ON PAYROLL** · AT WORK: quotes, contracts, invoices · ON SCREEN: How film studios hire real workers",
+       "Plus: parody film posters, a QR code at every stand, and a film costume contest on Friday 30 October (vote with the QR code)."
+      ]
+     },
+     {
+      "type": "reveal",
+      "hot": true,
+      "title": "HOW CAN YOU CONTRIBUTE?",
+      "lines": [
+       "In your team, choose one idea or suggest your own:",
+       "**Be the voice of the exhibition:** record the audio for a stand's QR code (45 to 60 seconds: AT WORK, ON SCREEN, the real worker).",
+       "**Live on the day:** be a guide or a shop assistant at a stand during the exhibition.",
+       "**Welding:** make a safe replica or a boiler-room set for your stand, and explain how you made it.",
+       "**Sales:** design the shop window for the Gremlins stand: the box, the price tag and the PRODUCT CARE INSTRUCTIONS.",
+       "**Logistics:** organise the loans: collect the objects, label them EXHIBIT A, B, C... and return them on 2 November.",
+       "**Everyone:** write a tagline for a parody poster, or plan your costume for the contest."
+      ]
+     },
+     {
+      "type": "note",
+      "md": "Before you go, say one sentence: \"I'd like to help with... because at work I...\""
+     },
+     {
+      "type": "useful",
+      "blocks": [
+       "fright-7"
+      ]
+     }
+    ]
+   }
+  ],
+  "extras": [
+   {
+    "id": "warnings",
+    "title": "Real or fake warning?",
+    "min": 8,
+    "blocks": [
+     {
+      "type": "text",
+      "md": "Some of these warnings are real. Some were invented by your teacher. Guess first, then tap the card. Why would a company write the real ones?"
+     },
+     {
+      "type": "flip",
+      "labels": [
+       "Real or fake?",
+       "The answer"
+      ],
+      "cards": [
+       [
+        "Warning 1",
+        "\"Remove child before folding.\" (on a baby stroller)",
+        "REAL. It comes from the Wacky Warning Label Contest."
+       ],
+       [
+        "Warning 2",
+        "\"Do not use this chainsaw to cut your hair.\" (on a chainsaw)",
+        "FAKE. Your teacher invented it."
+       ],
+       [
+        "Warning 3",
+        "\"Do not eat toner.\" (on a printer cartridge)",
+        "REAL. It comes from the Wacky Warning Label Contest."
+       ],
+       [
+        "Warning 4",
+        "\"Never iron clothes while they are being worn.\" (on an iron)",
+        "REAL. It comes from the Wacky Warning Label Contest."
+       ],
+       [
+        "Warning 5",
+        "\"This forklift is not a taxi.\" (on a forklift)",
+        "FAKE. Your teacher invented it."
+       ],
+       [
+        "Warning 6",
+        "\"This product not intended for use as a dental drill.\" (on an electric router)",
+        "REAL. It comes from the Wacky Warning Label Contest."
+       ],
+       [
+        "Warning 7",
+        "\"Shin pads cannot protect any part of the body they do not cover.\" (on shin pads)",
+        "REAL. It comes from the Wacky Warning Label Contest."
+       ],
+       [
+        "Warning 8",
+        "\"Do not feed this toaster after midnight.\" (on a toaster)",
+        "FAKE. Your teacher invented it."
+       ],
+       [
+        "Warning 9",
+        "\"Do not drive with sunshield in place.\" (on a car sunshield)",
+        "REAL. It comes from the Wacky Warning Label Contest."
+       ],
+       [
+        "Warning 10",
+        "\"Never use hair dryer while sleeping.\" (on a hair dryer)",
+        "REAL. It comes from the Wacky Warning Label Contest."
+       ],
+       [
+        "Warning 11",
+        "\"This welding helmet will not protect you from horror films.\" (on a welding helmet)",
+        "FAKE. Your teacher invented it."
+       ],
+       [
+        "Warning 12",
+        "\"Recycled flush water unsafe for drinking.\" (on a public toilet)",
+        "REAL. It comes from the Wacky Warning Label Contest."
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "id": "taglines",
+    "title": "Tagline workshop",
+    "min": 8,
+    "blocks": [
+     {
+      "type": "text",
+      "md": "Real horror film taglines:"
+     },
+     {
+      "type": "list",
+      "items": [
+       "\"In space, no one can hear you scream.\" (_Alien_, 1979)",
+       "\"Be afraid. Be very afraid.\" (_The Fly_, 1986)",
+       "\"Cute. Clever. Mischievous. Intelligent. Dangerous.\" (_Gremlins_, 1984)"
+      ]
+     },
+     {
+      "type": "note",
+      "md": "Change one for your tool. Example: \"In the workshop, no one can hear you... without ear defenders.\""
+     }
+    ]
+   }
+  ],
+  "decks": {
+   "products": [
+    {
+     "title": "MOGWAI",
+     "sub": "A very rare pet",
+     "body": [
+      "**1.** Keep him away from bright light.",
+      "**2.** Never get him wet.",
+      "**3.** Never feed him after midnight."
+     ]
+    },
+    {
+     "title": "AI COMPANION DOLL",
+     "sub": "The perfect friend for your child",
+     "body": [
+      "**1.** Pair it with one child only.",
+      "**2.** Never turn off the safety settings.",
+      "**3.** Update the software every week."
+     ]
+    },
+    {
+     "title": "PIZZERIA ANIMATRONIC",
+     "sub": "A singing mascot for your restaurant",
+     "body": [
+      "**1.** Switch it off at closing time.",
+      "**2.** Never leave it in free-roam mode at night.",
+      "**3.** Only a qualified technician can open it."
+     ]
+    },
+    {
+     "title": "THE LIMINAL ARMCHAIR",
+     "sub": "Night Shift Furniture & Co.",
+     "body": [
+      "**1.** Keep it in a room with the lights on.",
+      "**2.** Never put it in the basement.",
+      "**3.** If it moves, don't follow it."
+     ]
+    },
+    {
+     "title": "CHAINSAW",
+     "sub": "For professional forestry work",
+     "body": [
+      "**1.** Always hold it with both hands.",
+      "**2.** Wear a helmet, eye and ear protection, gloves, chainsaw trousers and safety boots.",
+      "**3.** Watch out for kickback: never cut with the tip of the bar."
+     ]
+    },
+    {
+     "title": "WELDING HELMET",
+     "sub": "Auto-darkening filter",
+     "body": [
+      "**1.** Check that it works before every job.",
+      "**2.** Change the cover lens when it is scratched or dirty.",
+      "**3.** Never look at the arc without it, not even for a second."
+     ]
+    },
+    {
+     "title": "MEDICAL COOL BOX",
+     "sub": "For urgent samples",
+     "body": [
+      "**1.** Keep it closed until delivery.",
+      "**2.** Keep it upright.",
+      "**3.** Deliver it before the time on the label."
+     ]
+    },
+    {
+     "title": "FLAT-PACK WARDROBE",
+     "sub": "Easy to assemble",
+     "body": [
+      "**1.** Assemble it with two people.",
+      "**2.** Fix it to the wall with the anti-tip kit.",
+      "**3.** Follow the steps in order."
+     ]
+    }
+   ],
+   "customers": [
+    {
+     "title": "A tired night-shift worker",
+     "sub": "",
+     "body": [
+      "Always sleepy, always in a hurry."
+     ]
+    },
+    {
+     "title": "A busy parent",
+     "sub": "",
+     "body": [
+      "Never reads the instructions."
+     ]
+    },
+    {
+     "title": "A teenager",
+     "sub": "",
+     "body": [
+      "Films everything for social media."
+     ]
+    },
+    {
+     "title": "A DIY fan",
+     "sub": "",
+     "body": [
+      "Hates manuals."
+     ]
+    },
+    {
+     "title": "A warehouse worker",
+     "sub": "",
+     "body": [
+      "Always in a hurry."
+     ]
+    },
+    {
+     "title": "An overconfident first-year apprentice",
+     "sub": "",
+     "body": [
+      "Thinks they know everything."
+     ]
+    },
+    {
+     "title": "A grandad",
+     "sub": "",
+     "body": [
+      "Doesn't trust technology."
+     ]
+    },
+    {
+     "title": "A student",
+     "sub": "",
+     "body": [
+      "Always on the phone."
+     ]
+    }
+   ]
   }
  }
 ];

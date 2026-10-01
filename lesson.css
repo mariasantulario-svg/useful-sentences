@@ -140,3 +140,15 @@ body.embed .tabbar, body.embed #viewLesson { display: none; }
 body.embed #viewSentences { padding-bottom: 0; }
 .dealt .in ul, .cosmic.face ul { list-style: disc; display: block; }
 .dealt .in li, .cosmic.face li { margin: 4px 0; }
+
+/* list, reveal, audio (added for Nine to Fright) */
+.blist { margin: 12px 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+.blist li { background: var(--chip); border-radius: 12px; padding: 11px 14px 11px 32px; position: relative; font-size: 16px; line-height: 1.35; }
+.blist li::before { content: ""; position: absolute; left: 13px; top: 18px; width: 8px; height: 8px; border-radius: 2px; background: var(--violet); }
+details.dlg .txt { padding: 0 14px 12px; }
+details.dlg .txt p { margin: 8px 0; font-size: 16px; line-height: 1.4; }
+details.dlg.hot { box-shadow: 4px 4px 0 var(--ink); }
+details.dlg.hot summary { background: var(--ink); color: var(--lime); border-radius: 11px; letter-spacing: .03em; }
+details.dlg.hot[open] summary { border-radius: 11px 11px 0 0; margin-bottom: 4px; }
+.aud { margin: 12px 0; }
+.aud audio { width: 100%; }

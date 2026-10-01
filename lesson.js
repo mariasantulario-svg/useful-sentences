@@ -86,7 +86,7 @@
       if (idx == null) { const prev = +(store.get(key + ':last' + k) || -1); do { idx = Math.floor(Math.random() * n); } while (n > 1 && idx === prev); }
       store.set(key, k + ',' + idx); store.set(key + ':last' + k, String(idx));
       box.innerHTML = ''; const c = el('div', 'dealt');
-      c.innerHTML = `<header><span>${esc(role.label.replace(/^I'm (an?|the) /i, ''))}</span><em>Only for your eyes</em></header><div class="in">${cardHTML(L, role, Array.isArray(deck) ? deck[idx] : null)}</div>`;
+      c.innerHTML = `<header><span>${esc(role.head || role.label.replace(/^I'm (an?|the) /i, ''))}</span><em>${esc(bk.tag || 'Only for your eyes')}</em></header><div class="in">${cardHTML(L, role, Array.isArray(deck) ? deck[idx] : null)}</div>`;
       const a = el('div', 'dactions');
       if (n > 1) { const again = el('button', 'treset', 'Deal me another card'); again.type = 'button'; again.addEventListener('click', () => give(k, null)); a.appendChild(again); }
       if (bk.roles.length > 1) { const ch = el('button', 'treset', 'Change role'); ch.type = 'button'; ch.addEventListener('click', () => { store.del(key); menu(); }); a.appendChild(ch); }
@@ -112,7 +112,7 @@
     left.forEach((o, n) => { const a = mk(o, 'L'), c = mk(right[n], 'R'); L.push(a); R.push(c); box.append(a, c); });
     return box;
   }
-  function flip(bk) { const g = el('div', 'flipgrid'); bk.cards.forEach(c => { const b = el('button'); b.type = 'button'; let open = false; const paint = () => { b.className = open ? 'open' : ''; b.innerHTML = `<b>${esc(c[0])}</b><small>${open ? 'On a CV, this is...' : 'The stereotype'}</small>${esc(open ? c[2] : c[1])}`; }; b.addEventListener('click', () => { open = !open; paint(); }); paint(); g.appendChild(b); }); return g; }
+  function flip(bk) { const [lf, lb] = bk.labels || ['The stereotype', 'On a CV, this is...']; const g = el('div', 'flipgrid'); bk.cards.forEach(c => { const b = el('button'); b.type = 'button'; let open = false; const paint = () => { b.className = open ? 'open' : ''; b.innerHTML = `<b>${esc(c[0])}</b><small>${esc(open ? lb : lf)}</small>${esc(open ? c[2] : c[1])}`; }; b.addEventListener('click', () => { open = !open; paint(); }); paint(); g.appendChild(b); }); return g; }
   function block(L, A, bk, n) {
     const key = 'us:' + L.id + ':' + A.id + ':' + n;
     switch (bk.type) {
@@ -129,6 +129,9 @@
       case 'gaps': return gaps(bk);
       case 'match': return match(bk);
       case 'flip': return flip(bk);
+      case 'list': { const ul = el('ul', 'blist'); bk.items.forEach(t => ul.appendChild(el('li', '', md(t)))); return ul; }
+      case 'reveal': { const d = el('details', 'dlg rev' + (bk.hot ? ' hot' : '')); d.innerHTML = `<summary>${md(bk.title)}</summary><div class="txt">${bk.lines.map(x => '<p>' + md(x) + '</p>').join('')}</div>`; return d; }
+      case 'audio': { const w = el('div', 'aud'); w.innerHTML = `<audio controls preload="none" src="audio/${esc(bk.src)}"></audio>`; return w; }
       case 'elements': { const g = el('div', 'elems'); bk.items.forEach(e => g.appendChild(el('div', '', `<h4>${esc(e.name)}</h4><small>${esc(e.signs)}</small>${e.lines.map(x => '<p>' + md(x) + '</p>').join('')}<em>The stars say: ${esc(e.stars)}</em>`))); return g; }
       case 'dialogue': { const d = el('details', 'dlg'); d.innerHTML = `<summary>${esc(bk.title)}</summary><div class="lines">${bk.lines.map(l => `<p><b>${esc(l[0])}</b>${esc(l[1])}</p>`).join('')}${bk.after ? '<p><i>' + esc(bk.after) + '</i></p>' : ''}</div>`; return d; }
       case 'video': { const w = el('div'); w.innerHTML = `<div class="video"><iframe src="https://www.youtube-nocookie.com/embed/${esc(bk.youtube)}" title="Video" allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" allowfullscreen loading="lazy"></iframe></div><a class="vlink" href="https://www.youtube.com/watch?v=${esc(bk.youtube)}" target="_blank" rel="noopener">Open the video in YouTube</a>`; return w; }

@@ -15,9 +15,10 @@
 
 // LESSON TITLES
 const STARS = "Written in the Stars: Your Professional Year";
+const FRIGHT = "Nine to Fright: Jobs and Tools on Screen";
 
 // Orden de los temas en el filtro de arriba
-const TOPICS = ["Horoscopes", "Personality traits", "Social media", "Stereotypes", "Teamwork", "Job interviews"];
+const TOPICS = ["Horoscopes", "Personality traits", "Social media", "Stereotypes", "Teamwork", "Job interviews", "Tools on screen", "Jobs on screen", "Products and safety"];
 
 // Orden de las funciones en el filtro "Useful for..."
 const FUNCTIONS = [
@@ -46,7 +47,7 @@ const FUNCTIONS = [
   "Giving advice",
   "Assigning tasks",
   "Negotiating",
-  "Giving your opinion",,
+  "Giving your opinion",
   "Asking interview questions",
   "Running the interview",
   "Describing yourself",
@@ -55,7 +56,25 @@ const FUNCTIONS = [
   "Buying time",
   "Bending the truth",
   "Revealing your sign",
-  "Describing personality"
+  "Describing personality",
+  "Guessing a place",
+  "Reacting to a scary situation",
+  "Finding things in common",
+  "Giving reasons",
+  "Talking about safety at work",
+  "Making a guess",
+  "Describing what a tool is for",
+  "Rejecting a job",
+  "Giving a verdict",
+  "Reacting to a surprise",
+  "Explaining rules",
+  "Asking about a product",
+  "Warning a customer",
+  "Labelling a risk",
+  "Talking about consequences",
+  "Disagreeing with a prediction",
+  "Presenting your tool",
+  "Offering to help"
 ];
 
 const SENTENCES = [
@@ -386,4 +405,70 @@ const SENTENCES = [
   { en: "rebellious", lesson: STARS, fn: "Describing personality", topics: ["Personality traits","Job interviews"], block: "hr-traits" },
   { en: "detached", lesson: STARS, fn: "Describing personality", topics: ["Personality traits","Job interviews"], block: "hr-traits" },
   // --- fin Astro-HR Interview ---
+
+  // --- Nine to Fright: Jobs and Tools on Screen (01/10/2026) ---
+  // fright-1
+  { en: "It sounds like an empty office.", lesson: FRIGHT, fn: "Guessing a place", topics: ["Jobs on screen"], block: "fright-1" },
+  { en: "I think I'm in a supermarket after closing time.", lesson: FRIGHT, fn: "Guessing a place", topics: ["Jobs on screen"], block: "fright-1" },
+  { en: "It must be really late at night.", lesson: FRIGHT, fn: "Guessing a place", topics: ["Jobs on screen"], block: "fright-1" },
+  { en: "It reminds me of the warehouse on a night shift.", lesson: FRIGHT, fn: "Guessing a place", topics: ["Jobs on screen"], block: "fright-1" },
+  { en: "It gives me the creeps.", lesson: FRIGHT, fn: "Reacting to a scary situation", topics: [], block: "fright-1" },
+  { en: "I'd never open that door.", lesson: FRIGHT, fn: "Reacting to a scary situation", topics: [], block: "fright-1" },
+  { en: "I'd open it, just to see what's behind it.", lesson: FRIGHT, fn: "Reacting to a scary situation", topics: [], block: "fright-1" },
+  { en: "Empty places are creepy because nobody can help you.", lesson: FRIGHT, fn: "Giving your opinion", topics: [], block: "fright-1" },
+  // fright-2
+  { en: "They're all work tools.", lesson: FRIGHT, fn: "Finding things in common", topics: ["Tools on screen"], block: "fright-2" },
+  { en: "None of them is a gun.", lesson: FRIGHT, fn: "Finding things in common", topics: ["Tools on screen"], block: "fright-2" },
+  { en: "You can find them in any workshop.", lesson: FRIGHT, fn: "Finding things in common", topics: ["Tools on screen"], block: "fright-2" },
+  { en: "A gun is too quick and too clean.", lesson: FRIGHT, fn: "Giving reasons", topics: ["Tools on screen"], block: "fright-2" },
+  { en: "The villain has to get really close.", lesson: FRIGHT, fn: "Giving reasons", topics: ["Tools on screen"], block: "fright-2" },
+  { en: "For me, the most convincing reason is...", lesson: FRIGHT, fn: "Giving reasons", topics: [], block: "fright-2" },
+  { en: "I've used one of these at work.", lesson: FRIGHT, fn: "Talking about safety at work", topics: ["Tools on screen", "Products and safety"], block: "fright-2" },
+  { en: "I always wear gloves and goggles.", lesson: FRIGHT, fn: "Talking about safety at work", topics: ["Tools on screen", "Products and safety"], block: "fright-2" },
+  // fright-3
+  { en: "I think this one goes with...", lesson: FRIGHT, fn: "Making a guess", topics: [], block: "fright-3" },
+  { en: "It must be the chainsaw, because...", lesson: FRIGHT, fn: "Making a guess", topics: ["Tools on screen"], block: "fright-3" },
+  { en: "I'm not sure, but maybe it's...", lesson: FRIGHT, fn: "Making a guess", topics: [], block: "fright-3" },
+  { en: "At work, you use it to...", lesson: FRIGHT, fn: "Describing what a tool is for", topics: ["Tools on screen"], block: "fright-3" },
+  { en: "On screen, it's used to scare people.", lesson: FRIGHT, fn: "Describing what a tool is for", topics: ["Tools on screen"], block: "fright-3" },
+  { en: "I wouldn't take that job for anything.", lesson: FRIGHT, fn: "Rejecting a job", topics: ["Jobs on screen"], block: "fright-3" },
+  { en: "A night shift in an old pizzeria? No, thanks.", lesson: FRIGHT, fn: "Rejecting a job", topics: ["Jobs on screen"], block: "fright-3" },
+  // fright-4
+  { en: "I'd say it's true, because...", lesson: FRIGHT, fn: "Giving a verdict", topics: [], block: "fright-4" },
+  { en: "It can't be true.", lesson: FRIGHT, fn: "Giving a verdict", topics: [], block: "fright-4" },
+  { en: "It must be false, otherwise...", lesson: FRIGHT, fn: "Giving a verdict", topics: [], block: "fright-4" },
+  { en: "I'm not convinced.", lesson: FRIGHT, fn: "Giving a verdict", topics: [], block: "fright-4" },
+  { en: "I had no idea!", lesson: FRIGHT, fn: "Reacting to a surprise", topics: [], block: "fright-4" },
+  { en: "That makes sense.", lesson: FRIGHT, fn: "Reacting to a surprise", topics: [], block: "fright-4" },
+  { en: "No way!", lesson: FRIGHT, fn: "Reacting to a surprise", topics: [], block: "fright-4" },
+  // fright-5
+  { en: "There are three rules.", lesson: FRIGHT, fn: "Explaining rules", topics: ["Products and safety"], block: "fright-5" },
+  { en: "Keep it away from bright light.", lesson: FRIGHT, fn: "Explaining rules", topics: ["Products and safety"], block: "fright-5" },
+  { en: "Whatever you do, never feed it after midnight.", lesson: FRIGHT, fn: "Explaining rules", topics: ["Products and safety"], block: "fright-5" },
+  { en: "The most important rule is...", lesson: FRIGHT, fn: "Explaining rules", topics: ["Products and safety"], block: "fright-5" },
+  { en: "Make sure you read the instructions.", lesson: FRIGHT, fn: "Explaining rules", topics: ["Products and safety"], block: "fright-5" },
+  { en: "What happens if I get it wet?", lesson: FRIGHT, fn: "Asking about a product", topics: ["Products and safety"], block: "fright-5" },
+  { en: "Trust me, you don't want to know.", lesson: FRIGHT, fn: "Warning a customer", topics: ["Products and safety"], block: "fright-5" },
+  { en: "That's not a clear instruction.", lesson: FRIGHT, fn: "Giving your opinion", topics: ["Products and safety"], block: "fright-5" },
+  { en: "This one is a danger, not a warning.", lesson: FRIGHT, fn: "Labelling a risk", topics: ["Products and safety"], block: "fright-5" },
+  // fright-6
+  { en: "He's bound to forget the rules.", lesson: FRIGHT, fn: "Predicting", topics: ["Products and safety"], block: "fright-6" },
+  { en: "She's bound to forget...", lesson: FRIGHT, fn: "Predicting", topics: ["Products and safety"], block: "fright-6" },
+  { en: "They're most likely to ignore the warning about...", lesson: FRIGHT, fn: "Predicting", topics: ["Products and safety"], block: "fright-6" },
+  { en: "I think they'll probably...", lesson: FRIGHT, fn: "Predicting", topics: ["Products and safety"], block: "fright-6" },
+  { en: "And then... will happen.", lesson: FRIGHT, fn: "Predicting", topics: ["Products and safety"], block: "fright-6" },
+  { en: "If they get it wet, it will multiply.", lesson: FRIGHT, fn: "Talking about consequences", topics: ["Products and safety"], block: "fright-6" },
+  { en: "That's very unlikely, because...", lesson: FRIGHT, fn: "Disagreeing with a prediction", topics: [], block: "fright-6" },
+  { en: "Whatever you do, never leave it on at night.", lesson: FRIGHT, fn: "Warning a customer", topics: ["Products and safety"], block: "fright-6" },
+  { en: "Make sure you switch it off at closing time.", lesson: FRIGHT, fn: "Warning a customer", topics: ["Products and safety"], block: "fright-6" },
+  // fright-7
+  { en: "At work, we use it to...", lesson: FRIGHT, fn: "Presenting your tool", topics: ["Tools on screen"], block: "fright-7" },
+  { en: "One safety rule is...", lesson: FRIGHT, fn: "Presenting your tool", topics: ["Tools on screen", "Products and safety"], block: "fright-7" },
+  { en: "On screen, it could appear in a film about...", lesson: FRIGHT, fn: "Presenting your tool", topics: ["Tools on screen"], block: "fright-7" },
+  { en: "The real worker behind it is me.", lesson: FRIGHT, fn: "Presenting your tool", topics: ["Tools on screen", "Jobs on screen"], block: "fright-7" },
+  { en: "I'd like to help with...", lesson: FRIGHT, fn: "Offering to help", topics: [], block: "fright-7" },
+  { en: "Because at work I...", lesson: FRIGHT, fn: "Offering to help", topics: [], block: "fright-7" },
+  { en: "We could record the audio for the QR code.", lesson: FRIGHT, fn: "Offering to help", topics: [], block: "fright-7" },
+  { en: "We could design the shop window.", lesson: FRIGHT, fn: "Offering to help", topics: [], block: "fright-7" },
+  // --- fin Nine to Fright ---
 ];
