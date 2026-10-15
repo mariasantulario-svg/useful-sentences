@@ -2473,7 +2473,7 @@ const LESSONS_DATA = [
     "blocks": [
      {
       "type": "teacher",
-      "md": "Vídeo de un joven explicando a un millennial cómo usar algo del móvil o del PC (en la presentación HTML). Preguntas al aire, sin corregir; luego parejas de sectores distintos."
+      "md": "Vídeo en la presentación (sketch de Foil Arms and Hog, 2:06). Preguntas 1 a 3 en parejas, 4 y 5 en plenario. Luego Speak 1 en parejas de sectores distintos."
      },
      {
       "type": "text",
@@ -2523,64 +2523,172 @@ const LESSONS_DATA = [
    },
    {
     "id": "1",
-    "title": "What comes first?",
-    "min": 8,
+    "title": "The new colleague",
+    "min": 34,
     "timers": [
      [
       "Order the steps",
       3
      ],
      [
-      "Tell your partner",
+      "Compare",
+      2
+     ],
+     [
+      "What is wrong?",
       3
+     ],
+     [
+      "Speak 2",
+      4
+     ],
+     [
+      "Speak 3",
+      4
+     ],
+     [
+      "Speak 4",
+      3
+     ],
+     [
+      "A explains",
+      2
+     ],
+     [
+      "Change roles",
+      2
      ]
     ],
     "blocks": [
      {
       "type": "teacher",
-      "md": "**Objetivo:** activar los conectores sin explicarlos. **1.** Cada uno ordena los pasos de SU sector (3 min). **2.** Parejas de sectores distintos: cuentan el proceso con First, Then, After that, Finally (3 min). **3.** Plenario: un voluntario por sector dice los cinco pasos; escribe los cuatro conectores en la pizarra. Corrige solo el orden. **Clave:** Welder B C E A D · Shop assistant C B E D A · Electrician B D E A C."
+      "md": "Proceso general: dar de alta a un compañero nuevo en el sistema de fichaje. Clave: C E A D B. Audio Dani_and_Alex (59 s) en la presentación: Dani lo explica mal. Qué falla: va rápido, salta y desordena pasos, no lo muestra, falta información (datos, contraseña), no comprueba, se va a comer. Después de los tres Speak, A hace de Dani bueno y B de Alex."
      },
      {
       "type": "text",
-      "md": "Find **your** sector. Put the five steps in order (1 to 5). Then tell a partner from **another** sector about one process: _First..., Then..., After that..., Finally..._"
+      "md": "A new colleague starts tomorrow. Somebody has to **register them in the clocking-in system**. Put the five steps in order (1 to 5). How do _you_ think it goes?"
      },
      {
-      "type": "reveal",
-      "title": "Welder",
-      "lines": [
-       "A) Weld the joint.",
-       "B) Put on your helmet, gloves and jacket.",
-       "C) Clean the metal.",
-       "D) Check the weld when it is cold.",
-       "E) Clamp the two pieces together."
+      "type": "list",
+      "items": [
+       "A) Create their account in the staff app.",
+       "B) Charge the deposit for the badge and give them the badge.",
+       "C) Ask the new colleague for their details: name, ID number and phone.",
+       "D) Give them the password and show them how to clock in.",
+       "E) Take a photo for the badge."
       ]
      },
      {
       "type": "reveal",
-      "title": "Shop assistant",
+      "title": "Answer",
       "lines": [
-       "A) Give the receipt.",
-       "B) Show two or three products.",
-       "C) Say hello and ask what the customer needs.",
-       "D) Take the payment.",
-       "E) Explain the price."
-      ]
-     },
-     {
-      "type": "reveal",
-      "title": "Electrician",
-      "lines": [
-       "A) Connect the new socket.",
-       "B) Switch off the power at the fuse box.",
-       "C) Switch the power on and test the socket.",
-       "D) Take off the cover and check the wires with a voltage tester.",
-       "E) Take out the old socket."
+       "**C E A D B:** details, photo, account, password and clock in, deposit and badge."
       ]
      },
      {
       "type": "useful",
       "blocks": [
        "howdone-1"
+      ]
+     },
+     {
+      "type": "h",
+      "text": "Listen: Dani explains it to Alex"
+     },
+     {
+      "type": "text",
+      "md": "Dani has worked there for years. Alex started last week. Listen twice. **What is wrong** with Dani's explanation? Find at least three things."
+     },
+     {
+      "type": "audio",
+      "src": "howdone_dani-and-alex.mp3"
+     },
+     {
+      "type": "dialogue",
+      "title": "Script (open it after the second listening)",
+      "lines": [
+       [
+        "DANI",
+        "Right, Alex. New people: you register them. It's easy. You open the staff app, you create the account, and that's it."
+       ],
+       [
+        "ALEX",
+        "OK... which app?"
+       ],
+       [
+        "DANI",
+        "The staff app, on the computer. Then you give them the badge. Ten euros deposit, they pay, you give them the badge."
+       ],
+       [
+        "ALEX",
+        "And the photo? Do I take a photo?"
+       ],
+       [
+        "DANI",
+        "Oh yes, the photo. First. Well, after the details. Anyway, you'll see it."
+       ],
+       [
+        "ALEX",
+        "What details do I need?"
+       ],
+       [
+        "DANI",
+        "The usual. Name and things. Then the account, then the badge. Any questions? No? Perfect. I'm off to lunch."
+       ],
+       [
+        "ALEX",
+        "Wait! How do I log in to the app?"
+       ],
+       [
+        "DANI",
+        "It's on a sticky note somewhere!"
+       ]
+      ]
+     },
+     {
+      "type": "reveal",
+      "title": "What is wrong (open it after you say it)",
+      "lines": [
+       "He goes too fast.",
+       "He skips steps.",
+       "He doesn't show it.",
+       "Some information is missing: which details, the password.",
+       "He doesn't check if Alex understands.",
+       "He leaves before the end."
+      ]
+     },
+     {
+      "type": "h",
+      "text": "Speak"
+     },
+     {
+      "type": "questions",
+      "items": [
+       "When your teachers explain a process in the workshop, the office or the company, are they **patient**?",
+       "Have you ever made a **mistake** in a new task because nobody explained it well?",
+       "Think of someone who often explains processes to you. Is he or she **easy to understand**? What does he or she do wrong? How would **you** improve the explanation?",
+       "Has a colleague ever made a mistake because **you** didn't explain the process well? What happened?"
+      ]
+     },
+     {
+      "type": "useful",
+      "blocks": [
+       "howdone-0"
+      ]
+     },
+     {
+      "type": "h",
+      "text": "How would you explain it?"
+     },
+     {
+      "type": "text",
+      "md": "You have the five steps in the right order. **A is a good Dani:** explain the process step by step: _First, you... Then... After that... Finally..._ **B is Alex:** ask at least two questions: _Which app? What's the password? Can you show me?_ Change roles."
+     },
+     {
+      "type": "useful",
+      "blocks": [
+       "howdone-3",
+       "howdone-4"
       ]
      }
     ]
@@ -2606,11 +2714,11 @@ const LESSONS_DATA = [
     "blocks": [
      {
       "type": "teacher",
-      "md": "**Objetivo:** comprensión de un proceso oral. **1.** Primera escucha: solo idea general. **2.** Segunda: las 8 preguntas. **3.** Nadie escribe: respuestas en parejas en voz alta y plenario con la clave. **4.** Be the colleague: cada uno cuenta en primera persona el proceso de un hablante de OTRO sector; el compañero dice qué falta. **Clave:** 1 fuse box · 2 so that the customer is safe · 3 helmet and gloves · 4 so that the weld is strong · 5 when it is cold · 6 says hello, asks what they need · 7 some customers don't know what they want · 8 the receipt. Tiempos: Iker 20 min, Rubén 1 h, Carla 10 min por cliente."
+      "md": "**Objetivo:** modelos de explicación correcta. Audio dos veces. Nadie escribe las respuestas: parejas en voz alta y plenario con la clave. Después cada uno escribe los cuatro pasos de un hablante de OTRO sector y se lo cuenta a su pareja en primera persona. **Clave:** 1 fuse box · 2 so that the customer is safe · 3 helmet and gloves · 4 so that the weld is strong · 5 when it is cold · 6 says hello, asks what they need · 7 some customers don't know what they want · 8 the receipt."
      },
      {
       "type": "text",
-      "md": "Three people explain how they do their job: **Iker** (electrician), **Rubén** (welder) and **Carla** (shop assistant). Listen twice and answer on your worksheet."
+      "md": "Three people explain how they do their job: **Iker** (electrician), **Rubén** (welder) and **Carla** (shop assistant). Listen twice and answer out loud with your partner."
      },
      {
       "type": "audio",
@@ -2631,7 +2739,7 @@ const LESSONS_DATA = [
      },
      {
       "type": "note",
-      "md": "Answer out loud with your partner. Then choose a speaker from **another sector**, write their four steps on your worksheet and **be the colleague**: tell your partner the process in the first person: _I'm Rubén. First I..._ Your partner says what you forgot."
+      "md": "Now choose a speaker from **another sector**, write their four steps on your worksheet and **be the colleague**: tell your partner the process in the first person: _I'm Rubén. First I..._ Your partner says what you forgot."
      },
      {
       "type": "reveal",
@@ -2653,11 +2761,11 @@ const LESSONS_DATA = [
    {
     "id": "3",
     "title": "The expert's eye",
-    "min": 16,
+    "min": 8,
     "timers": [
      [
       "Prepare in your group",
-      5
+      4
      ],
      [
       "Report",
@@ -2667,24 +2775,7 @@ const LESSONS_DATA = [
     "blocks": [
      {
       "type": "teacher",
-      "md": "**Objetivo:** que el experto corrija al audio: speaking real con lo que saben. Grupos por sector (soldadura en dos grupos si son muchos). Cada grupo prepara dos frases con **He forgot to...** / **Before you..., you have to...** (5 min). Portavoz; los otros sectores hacen una pregunta. **Posibles respuestas:** Electricidad: quitar la tapa antes de comprobar; comprobar que no hay tensión de verdad; herramientas aisladas; volver a dar corriente antes de probar. Soldadura: chaqueta o mandil y botas; nada inflamable cerca, ventilación; ajustes de la máquina; quitar la escoria antes de revisar; sujetar con mordazas, no con las manos. Ventas: preguntar talla, presupuesto o uso; ofrecer una alternativa; garantía y devoluciones; preguntar si necesita algo más; despedirse."
-     },
-     {
-      "type": "h",
-      "text": "Speak first"
-     },
-     {
-      "type": "questions",
-      "items": [
-       "When your teachers explain a process in the workshop, the office or the company, are they **patient**?",
-       "Have you ever made a **mistake** in a new task because nobody explained it well?"
-      ]
-     },
-     {
-      "type": "useful",
-      "blocks": [
-       "howdone-0"
-      ]
+      "md": "**Objetivo:** el experto corrige al audio. Grupos por sector. Dos frases con He forgot to... / Before you..., you have to... Portavoz; los otros sectores preguntan una cosa. **Posibles respuestas:** electricidad, quitar la tapa, comprobar que no hay tensión, herramientas aisladas, volver a dar corriente antes de probar; soldadura, chaqueta y botas, nada inflamable, ajustes de la máquina, quitar la escoria, mordazas; ventas, talla o presupuesto, alternativa, garantía y devoluciones, despedirse. **Después: descanso de 5 min.**"
      },
      {
       "type": "text",
@@ -2709,21 +2800,50 @@ const LESSONS_DATA = [
    {
     "id": "4",
     "title": "Say it right: the app",
-    "min": 12,
+    "min": 16,
     "timers": [
+     [
+      "Speak: groups",
+      3
+     ],
+     [
+      "Class vote",
+      3
+     ],
      [
       "Listen and repeat",
       7
      ],
      [
-      "Quick-fire pairs",
+      "Quick-fire",
       4
      ]
     ],
     "blocks": [
      {
       "type": "teacher",
-      "md": "**Objetivo:** input oral individual antes de producir. **1.** Cada uno, con su móvil: toca cada frase de los dos bloques, la escucha y la repite dos veces en voz baja (7 min). Elige cinco frases que va a usar hoy y las escribe en la hoja. **2.** Quick-fire en parejas (4 min): A dice un paso de su proceso de la actividad 1; B pregunta _How long does it take?_ o _Why do you do that?_; A contesta con _so that_ o _because_. Cambio. Pasa por las mesas y corrige pronunciación de **first, so that, because**."
+      "md": "Tras el descanso, primero el Speak de cierre del tema (grupos de tres, votación). Luego input oral individual: cada uno toca cada frase, la escucha y la repite dos veces en voz baja; escribe cinco en la hoja. Quick-fire en parejas: A dice un paso, B pregunta How long does it take? o Why do you do that?, A contesta con so that o because."
+     },
+     {
+      "type": "h",
+      "text": "Speak"
+     },
+     {
+      "type": "questions",
+      "items": [
+       "When a trainee makes a mistake because of a bad explanation, **who is it worse for**: the teacher, the tutor or the boss? Or the student, the trainee or the employee? Why?",
+       "How do you think **each of them feels**?"
+      ]
+     },
+     {
+      "type": "useful",
+      "blocks": [
+       "howdone-0"
+      ]
+     },
+     {
+      "type": "h",
+      "text": "The app"
      },
      {
       "type": "text",
@@ -2742,14 +2862,7 @@ const LESSONS_DATA = [
      },
      {
       "type": "text",
-      "md": "A says **one step** of their process. B asks _How long does it take?_ or _Why do you do that?_ A answers with _so that_ or _because_. Change roles. Four steps each."
-     },
-     {
-      "type": "reveal",
-      "title": "Extension (B1): if you can, add one of these",
-      "lines": [
-       "Open the useful language below."
-      ]
+      "md": "A says **one step** of a process. B asks _How long does it take?_ or _Why do you do that?_ A answers with _so that_ or _because_. Change roles. Four steps each."
      },
      {
       "type": "useful",
@@ -2760,78 +2873,9 @@ const LESSONS_DATA = [
     ]
    },
    {
-    "id": "9",
-    "title": "Stop! You forgot to...",
-    "min": 14,
-    "timers": [
-     [
-      "Round 1",
-      5
-     ],
-     [
-      "Round 2",
-      5
-     ],
-     [
-      "Best STOP",
-      3
-     ]
-    ],
-    "blocks": [
-     {
-      "type": "teacher",
-      "md": "**Objetivo:** detectar un paso que falta o un orden mal, y decir **por qué importa**. Cada pareja: una tarjeta del sector de A, el que lee (impresa, dos juegos, o en la app: los dos eligen el mismo código). A lee su lista con un error y no lo dice. B tiene la lista correcta, dice STOP, dice qué falla **y la consecuencia** (_If you don't..., you could..._). Segunda ronda con tarjeta nueva y roles cambiados. Cierre: cada pareja dice su mejor STOP en voz alta. **Claves:** W1 Falta el paso 1: helmet, gloves and jacket (EPI). · W2 Orden: se suelda antes de sujetar las piezas (pasos 3 y 4 cambiados). · W3 Falta el paso 5: check the weld when it is cold. · S1 Falta el paso 1: say hello and ask what the customer needs. · S2 Orden: se cobra antes de enseñar productos y explicar el precio (paso 4 en segundo lugar). · S3 Falta el paso 5: give the receipt. · E1 Falta el paso 1: switch off the power (seguridad). · E2 Orden: se da la corriente y se prueba antes de conectar el enchufe nuevo (pasos 4 y 5 cambiados). · E3 Falta el paso 2: take off the cover and check the wires with a voltage tester."
-     },
-     {
-      "type": "h",
-      "text": "Speak first"
-     },
-     {
-      "type": "questions",
-      "items": [
-       "Has a colleague ever made a mistake because **you** didn't explain the process well? What happened?"
-      ]
-     },
-     {
-      "type": "useful",
-      "blocks": [
-       "howdone-0"
-      ]
-     },
-     {
-      "type": "text",
-      "md": "**Student A** reads a list of steps. The list has a mistake: a step is missing or the order is wrong. Do not say which. **Student B** has the correct steps, listens and says **STOP**. Then B says **what is wrong and why it matters**. Change roles with a new card."
-     },
-     {
-      "type": "h",
-      "text": "Student A: pick your card"
-     },
-     {
-      "type": "choose",
-      "deck": "stopA",
-      "label": "Student A · choose the same code as your partner"
-     },
-     {
-      "type": "h",
-      "text": "Student B: pick the same card"
-     },
-     {
-      "type": "choose",
-      "deck": "stopB",
-      "label": "Student B · the correct list"
-     },
-     {
-      "type": "useful",
-      "blocks": [
-       "howdone-5"
-      ]
-     }
-    ]
-   },
-   {
     "id": "5",
     "title": "Prepare your process",
-    "min": 18,
+    "min": 12,
     "timers": [
      [
       "Fill in the template",
@@ -2845,28 +2889,11 @@ const LESSONS_DATA = [
     "blocks": [
      {
       "type": "teacher",
-      "md": "**Objetivo:** plantilla propia, no texto para leer. Mínimo cuatro pasos, un tiempo y una razón. Pueden tener la app abierta. Pasa por las mesas con vocabulario concreto. Quien acabe: ensaya en voz baja y cronometra con el móvil (¿cerca de un minuto?)."
-     },
-     {
-      "type": "h",
-      "text": "Speak first"
-     },
-     {
-      "type": "questions",
-      "items": [
-       "Think of someone who often explains processes to you. Is he or she **easy to understand**? What does he or she do wrong?",
-       "How would **you** improve the explanation?"
-      ]
-     },
-     {
-      "type": "useful",
-      "blocks": [
-       "howdone-0"
-      ]
+      "md": "Plantilla propia, no texto para leer. Mínimo cuatro pasos, un tiempo y una razón, y seis palabras clave. Pasa por las mesas con vocabulario concreto."
      },
      {
       "type": "text",
-      "md": "Choose a process from your job or your studies. A process has **at least four steps, a time and a reason**. Fill in the template on your worksheet. In class you can look at your notes, but do not read from a text."
+      "md": "Choose a process from **your job or your studies**. A process has **at least four steps, a time and a reason**. Fill in the template on your worksheet and write your six key words. In class you can look at your notes, but do not read from a text."
      },
      {
       "type": "list",
@@ -2913,7 +2940,7 @@ const LESSONS_DATA = [
     "blocks": [
      {
       "type": "teacher",
-      "md": "**Objetivo:** explicar, preguntar y reformular. Parejas de sectores distintos. Cronometra en voz alta cada minuto. Tú escuchas a **3 o 4 parejas** con la lista de control (0-2 por criterio); el resto se evalúa en la ronda 2 y con el vídeo de la actividad 10. Si sois impares, entras tú como alumna."
+      "md": "Parejas de sectores distintos. Cronometra en voz alta. Lista de control con 3 o 4 parejas; apunta frases buenas y errores para la 8."
      },
      {
       "type": "text",
@@ -2923,7 +2950,7 @@ const LESSONS_DATA = [
       "type": "list",
       "items": [
        "**1 · A explains** a process (1 min). B listens and does not interrupt.",
-       "**2 · B asks two questions:** _How long does it take? Why do you do that?_ (or another question from the app).",
+       "**2 · B asks two questions:** _How long does it take? Why do you do that?_",
        "**3 · B retells** the process: _So first you..., then you..._ A says _That's right_ or corrects.",
        "**4 · Change roles.**"
       ]
@@ -2940,7 +2967,7 @@ const LESSONS_DATA = [
    {
     "id": "7",
     "title": "The process interview · Round 2",
-    "min": 10,
+    "min": 8,
     "timers": [
      [
       "A explains",
@@ -2958,11 +2985,11 @@ const LESSONS_DATA = [
     "blocks": [
      {
       "type": "teacher",
-      "md": "**Objetivo:** repetir con menos apoyo. Rota una fila de la clase: pareja nueva, sector distinto si se puede. Ahora la plantilla se dobla: solo se mira la caja de **seis palabras clave** de la hoja. Escucha a las parejas que no oíste en la ronda 1."
+      "md": "Pareja nueva (move seats). Plantilla doblada: solo las seis palabras clave. Escucha a las parejas que no oíste en la ronda 1."
      },
      {
       "type": "text",
-      "md": "New partner. This time, **fold your template**: you can only look at your **six key words**. Same steps, shorter: A explains (1 min), B asks one question and retells. Change roles."
+      "md": "New partner: move seats. **Fold your template**: you can only see your **six key words**. A explains (1 min), B asks one question and retells. Change roles."
      },
      {
       "type": "useful",
@@ -2979,7 +3006,7 @@ const LESSONS_DATA = [
     "blocks": [
      {
       "type": "teacher",
-      "md": "**Objetivo:** corrección colectiva breve. En la pizarra: **tres frases buenas** que has oído (con el nombre de quien la dijo) y **dos errores frecuentes**, escritos mal; la clase los corrige y repite la versión buena. Nada más."
+      "md": "Pizarra: tres frases buenas (con nombre) y dos errores frecuentes tal cual se dijeron; la clase corrige y repite. Cinco minutos."
      },
      {
       "type": "text",
@@ -2988,7 +3015,7 @@ const LESSONS_DATA = [
     ]
    },
    {
-    "id": "10",
+    "id": "9",
     "title": "The one-minute take",
     "min": 12,
     "timers": [
@@ -3012,7 +3039,7 @@ const LESSONS_DATA = [
     "blocks": [
      {
       "type": "teacher",
-      "md": "**Objetivo:** evidencia de evaluación de todo el grupo. En parejas: B graba a A con el móvil de A (1 min, sin leer; solo las seis palabras clave). Cambio. Se permite una segunda toma. Lista de control sin el criterio de preguntas: orden, tiempo y razón, comprensible (nota sobre 6). **Entrega:** POR DECIDIR antes de clase: tarea en Aules (curso 224899) o envío por el canal que indiques."
+      "md": "Evidencia de todo el grupo. B graba a A con el móvil de A (1 min, sin leer; solo las seis palabras clave). Cambio. Segunda toma permitida. Lista de control sin el criterio de preguntas (sobre 6). POR DECIDIR antes de clase: tarea en Aules (curso 224899) o el canal que indiques."
      },
      {
       "type": "text",
@@ -3041,30 +3068,13 @@ const LESSONS_DATA = [
     ]
    },
    {
-    "id": "11",
+    "id": "10",
     "title": "Exit ticket",
-    "min": 10,
+    "min": 4,
     "blocks": [
      {
       "type": "teacher",
-      "md": "Recoge los tickets a la salida. Te sirven para decidir qué repasar en la sesión siguiente."
-     },
-     {
-      "type": "h",
-      "text": "Speak first"
-     },
-     {
-      "type": "questions",
-      "items": [
-       "When a trainee makes a mistake because of a bad explanation, **who is it worse for**: the teacher, the tutor or the boss? Or the student, the trainee or the employee? Why?",
-       "How do you think **each of them feels**?"
-      ]
-     },
-     {
-      "type": "useful",
-      "blocks": [
-       "howdone-0"
-      ]
+      "md": "Recoge los tickets a la salida."
      },
      {
       "type": "text",
@@ -3305,235 +3315,8 @@ const LESSONS_DATA = [
       ]
      }
     ]
-   },
-   {
-    "id": "R4",
-    "title": "Stop! with a card from another sector",
-    "min": 7,
-    "blocks": [
-     {
-      "type": "teacher",
-      "md": "Como la actividad 9, pero la tarjeta es de un sector que no es el de ninguno de los dos. B tiene la lista correcta, así que puede jugar sin saber de soldadura."
-     },
-     {
-      "type": "text",
-      "md": "Same game as activity 9, but take a card from a sector that is **not yours and not your partner's**. Student B has the correct list, so you can play even if it is not your job."
-     },
-     {
-      "type": "useful",
-      "blocks": [
-       "howdone-5"
-      ]
-     }
-    ]
    }
   ],
-  "decks": {
-   "stopA": [
-    {
-     "title": "W1 · Welding",
-     "sub": "Read these steps. Your list has a mistake: do not say it.",
-     "body": [
-      "**1.** Clean the metal.",
-      "**2.** Clamp the two pieces together.",
-      "**3.** Weld the joint.",
-      "**4.** Check the weld when it is cold."
-     ]
-    },
-    {
-     "title": "W2 · Welding",
-     "sub": "Read these steps. Your list has a mistake: do not say it.",
-     "body": [
-      "**1.** Put on your helmet, gloves and jacket.",
-      "**2.** Clean the metal.",
-      "**3.** Weld the joint.",
-      "**4.** Clamp the two pieces together.",
-      "**5.** Check the weld when it is cold."
-     ]
-    },
-    {
-     "title": "W3 · Welding",
-     "sub": "Read these steps. Your list has a mistake: do not say it.",
-     "body": [
-      "**1.** Put on your helmet, gloves and jacket.",
-      "**2.** Clean the metal.",
-      "**3.** Clamp the two pieces together.",
-      "**4.** Weld the joint."
-     ]
-    },
-    {
-     "title": "S1 · Sales",
-     "sub": "Read these steps. Your list has a mistake: do not say it.",
-     "body": [
-      "**1.** Show two or three products.",
-      "**2.** Explain the price.",
-      "**3.** Take the payment.",
-      "**4.** Give the receipt."
-     ]
-    },
-    {
-     "title": "S2 · Sales",
-     "sub": "Read these steps. Your list has a mistake: do not say it.",
-     "body": [
-      "**1.** Say hello and ask what the customer needs.",
-      "**2.** Take the payment.",
-      "**3.** Show two or three products.",
-      "**4.** Explain the price.",
-      "**5.** Give the receipt."
-     ]
-    },
-    {
-     "title": "S3 · Sales",
-     "sub": "Read these steps. Your list has a mistake: do not say it.",
-     "body": [
-      "**1.** Say hello and ask what the customer needs.",
-      "**2.** Show two or three products.",
-      "**3.** Explain the price.",
-      "**4.** Take the payment."
-     ]
-    },
-    {
-     "title": "E1 · Electricity",
-     "sub": "Read these steps. Your list has a mistake: do not say it.",
-     "body": [
-      "**1.** Take off the cover and check the wires with a voltage tester.",
-      "**2.** Take out the old socket.",
-      "**3.** Connect the new socket.",
-      "**4.** Switch the power on and test the socket."
-     ]
-    },
-    {
-     "title": "E2 · Electricity",
-     "sub": "Read these steps. Your list has a mistake: do not say it.",
-     "body": [
-      "**1.** Switch off the power at the fuse box.",
-      "**2.** Take off the cover and check the wires with a voltage tester.",
-      "**3.** Take out the old socket.",
-      "**4.** Switch the power on and test the socket.",
-      "**5.** Connect the new socket."
-     ]
-    },
-    {
-     "title": "E3 · Electricity",
-     "sub": "Read these steps. Your list has a mistake: do not say it.",
-     "body": [
-      "**1.** Switch off the power at the fuse box.",
-      "**2.** Take out the old socket.",
-      "**3.** Connect the new socket.",
-      "**4.** Switch the power on and test the socket."
-     ]
-    }
-   ],
-   "stopB": [
-    {
-     "title": "W1 · Welding",
-     "sub": "Listen. Is a step missing or is the order wrong? Say STOP, then say why.",
-     "body": [
-      "**1.** Put on your helmet, gloves and jacket.",
-      "**2.** Clean the metal.",
-      "**3.** Clamp the two pieces together.",
-      "**4.** Weld the joint.",
-      "**5.** Check the weld when it is cold.",
-      "_Clue: the arc burns your eyes and your skin._"
-     ]
-    },
-    {
-     "title": "W2 · Welding",
-     "sub": "Listen. Is a step missing or is the order wrong? Say STOP, then say why.",
-     "body": [
-      "**1.** Put on your helmet, gloves and jacket.",
-      "**2.** Clean the metal.",
-      "**3.** Clamp the two pieces together.",
-      "**4.** Weld the joint.",
-      "**5.** Check the weld when it is cold.",
-      "_Clue: the pieces move while you weld._"
-     ]
-    },
-    {
-     "title": "W3 · Welding",
-     "sub": "Listen. Is a step missing or is the order wrong? Say STOP, then say why.",
-     "body": [
-      "**1.** Put on your helmet, gloves and jacket.",
-      "**2.** Clean the metal.",
-      "**3.** Clamp the two pieces together.",
-      "**4.** Weld the joint.",
-      "**5.** Check the weld when it is cold.",
-      "_Clue: a weak weld can break._"
-     ]
-    },
-    {
-     "title": "S1 · Sales",
-     "sub": "Listen. Is a step missing or is the order wrong? Say STOP, then say why.",
-     "body": [
-      "**1.** Say hello and ask what the customer needs.",
-      "**2.** Show two or three products.",
-      "**3.** Explain the price.",
-      "**4.** Take the payment.",
-      "**5.** Give the receipt.",
-      "_Clue: the customer feels ignored._"
-     ]
-    },
-    {
-     "title": "S2 · Sales",
-     "sub": "Listen. Is a step missing or is the order wrong? Say STOP, then say why.",
-     "body": [
-      "**1.** Say hello and ask what the customer needs.",
-      "**2.** Show two or three products.",
-      "**3.** Explain the price.",
-      "**4.** Take the payment.",
-      "**5.** Give the receipt.",
-      "_Clue: the customer doesn't know the price yet._"
-     ]
-    },
-    {
-     "title": "S3 · Sales",
-     "sub": "Listen. Is a step missing or is the order wrong? Say STOP, then say why.",
-     "body": [
-      "**1.** Say hello and ask what the customer needs.",
-      "**2.** Show two or three products.",
-      "**3.** Explain the price.",
-      "**4.** Take the payment.",
-      "**5.** Give the receipt.",
-      "_Clue: no receipt, no returns._"
-     ]
-    },
-    {
-     "title": "E1 · Electricity",
-     "sub": "Listen. Is a step missing or is the order wrong? Say STOP, then say why.",
-     "body": [
-      "**1.** Switch off the power at the fuse box.",
-      "**2.** Take off the cover and check the wires with a voltage tester.",
-      "**3.** Take out the old socket.",
-      "**4.** Connect the new socket.",
-      "**5.** Switch the power on and test the socket.",
-      "_Clue: electric shock._"
-     ]
-    },
-    {
-     "title": "E2 · Electricity",
-     "sub": "Listen. Is a step missing or is the order wrong? Say STOP, then say why.",
-     "body": [
-      "**1.** Switch off the power at the fuse box.",
-      "**2.** Take off the cover and check the wires with a voltage tester.",
-      "**3.** Take out the old socket.",
-      "**4.** Connect the new socket.",
-      "**5.** Switch the power on and test the socket.",
-      "_Clue: live wires while you work._"
-     ]
-    },
-    {
-     "title": "E3 · Electricity",
-     "sub": "Listen. Is a step missing or is the order wrong? Say STOP, then say why.",
-     "body": [
-      "**1.** Switch off the power at the fuse box.",
-      "**2.** Take off the cover and check the wires with a voltage tester.",
-      "**3.** Take out the old socket.",
-      "**4.** Connect the new socket.",
-      "**5.** Switch the power on and test the socket.",
-      "_Clue: the label on the fuse box can be wrong._"
-     ]
-    }
-   ]
-  }
+  "decks": {}
  }
 ];
