@@ -1,4 +1,4 @@
-// Useful sentences for CVOPT Anglès Oral
+// Click and Talk: useful sentences for CVOPT Anglès Oral
 //
 // ESTE ES EL UNICO ARCHIVO QUE SE EDITA. Una frase por linea en SENTENCES:
 //    en:     la frase (obligatorio)
@@ -16,9 +16,10 @@
 // LESSON TITLES
 const STARS = "Written in the Stars: Your Professional Year";
 const FRIGHT = "Nine to Fright: Jobs and Tools on Screen";
+const HOWDONE = "Show Me How It's Done";
 
 // Orden de los temas en el filtro de arriba
-const TOPICS = ["Horoscopes", "Personality traits", "Social media", "Stereotypes", "Teamwork", "Job interviews", "Tools on screen", "Jobs on screen", "Products and safety"];
+const TOPICS = ["Horoscopes", "Personality traits", "Social media", "Stereotypes", "Teamwork", "Job interviews", "Tools on screen", "Jobs on screen", "Products and safety", "Work processes"];
 
 // Orden de las funciones en el filtro "Useful for..."
 const FUNCTIONS = [
@@ -74,7 +75,15 @@ const FUNCTIONS = [
   "Talking about consequences",
   "Disagreeing with a prediction",
   "Presenting your tool",
-  "Offering to help"
+  "Offering to help",
+  "Talking about teaching and learning",
+  "Ordering steps",
+  "Correcting a colleague",
+  "Explaining a process",
+  "Asking about a process",
+  "Checking that you understand",
+  "Stopping a mistake",
+  "Accepting a correction"
 ];
 
 const SENTENCES = [
@@ -471,4 +480,71 @@ const SENTENCES = [
   { en: "We could record the audio for the QR code.", lesson: FRIGHT, fn: "Offering to help", topics: [], block: "fright-7" },
   { en: "We could design the shop window.", lesson: FRIGHT, fn: "Offering to help", topics: [], block: "fright-7" },
   // --- fin Nine to Fright ---
+
+  // --- Show Me How It's Done (15/10/2026). Sin mp3 todavia: voz del dispositivo ---
+  // howdone-0
+  { en: "I'm quite good at explaining things.", lesson: HOWDONE, fn: "Talking about teaching and learning", topics: ["Work processes"], block: "howdone-0" },
+  { en: "Once I had to show a colleague how to...", lesson: HOWDONE, fn: "Talking about teaching and learning", topics: ["Work processes"], block: "howdone-0" },
+  { en: "I prefer showing it, because...", lesson: HOWDONE, fn: "Talking about teaching and learning", topics: ["Work processes"], block: "howdone-0" },
+  { en: "It's easier to show it than to explain it.", lesson: HOWDONE, fn: "Talking about teaching and learning", topics: ["Work processes"], block: "howdone-0" },
+  { en: "Some of them go too fast.", lesson: HOWDONE, fn: "Talking about teaching and learning", topics: ["Work processes"], block: "howdone-0" },
+  { en: "Once I got it wrong because nobody told me...", lesson: HOWDONE, fn: "Talking about teaching and learning", topics: ["Work processes"], block: "howdone-0" },
+  { en: "He skips steps.", lesson: HOWDONE, fn: "Talking about teaching and learning", topics: ["Work processes"], block: "howdone-0" },
+  { en: "She doesn't check if we understand.", lesson: HOWDONE, fn: "Talking about teaching and learning", topics: ["Work processes"], block: "howdone-0" },
+  { en: "I would go step by step.", lesson: HOWDONE, fn: "Talking about teaching and learning", topics: ["Work processes"], block: "howdone-0" },
+  { en: "I forgot to say that...", lesson: HOWDONE, fn: "Talking about teaching and learning", topics: ["Work processes"], block: "howdone-0" },
+  { en: "It was partly my fault.", lesson: HOWDONE, fn: "Talking about teaching and learning", topics: ["Work processes"], block: "howdone-0" },
+  { en: "It's worse for the trainee, because...", lesson: HOWDONE, fn: "Talking about teaching and learning", topics: ["Work processes"], block: "howdone-0" },
+  { en: "He feels embarrassed. / She feels responsible.", lesson: HOWDONE, fn: "Talking about teaching and learning", topics: ["Work processes"], block: "howdone-0" },
+  // howdone-1
+  { en: "What comes first?", lesson: HOWDONE, fn: "Ordering steps", topics: ["Work processes"], block: "howdone-1" },
+  { en: "I think this one comes first.", lesson: HOWDONE, fn: "Ordering steps", topics: ["Work processes"], block: "howdone-1" },
+  { en: "No, that goes after this one.", lesson: HOWDONE, fn: "Ordering steps", topics: ["Work processes"], block: "howdone-1" },
+  { en: "First you..., then you...", lesson: HOWDONE, fn: "Ordering steps", topics: ["Work processes"], block: "howdone-1" },
+  { en: "And the last step is...", lesson: HOWDONE, fn: "Ordering steps", topics: ["Work processes"], block: "howdone-1" },
+  // howdone-2
+  { en: "He forgot to...", lesson: HOWDONE, fn: "Correcting a colleague", topics: ["Work processes"], block: "howdone-2" },
+  { en: "Before you..., you have to...", lesson: HOWDONE, fn: "Correcting a colleague", topics: ["Work processes"], block: "howdone-2" },
+  { en: "You also have to...", lesson: HOWDONE, fn: "Correcting a colleague", topics: ["Work processes"], block: "howdone-2" },
+  { en: "In real life, we always...", lesson: HOWDONE, fn: "Correcting a colleague", topics: ["Work processes"], block: "howdone-2" },
+  { en: "That's not enough. You need...", lesson: HOWDONE, fn: "Correcting a colleague", topics: ["Work processes"], block: "howdone-2" },
+  { en: "She should... first, so that...", lesson: HOWDONE, fn: "Correcting a colleague", topics: ["Work processes"], block: "howdone-2" },
+  // howdone-3
+  { en: "In my job, I often have to...", lesson: HOWDONE, fn: "Explaining a process", topics: ["Work processes"], block: "howdone-3" },
+  { en: "First, I get everything ready.", lesson: HOWDONE, fn: "Explaining a process", topics: ["Work processes"], block: "howdone-3" },
+  { en: "Then I check it.", lesson: HOWDONE, fn: "Explaining a process", topics: ["Work processes"], block: "howdone-3" },
+  { en: "After that, I do the main job.", lesson: HOWDONE, fn: "Explaining a process", topics: ["Work processes"], block: "howdone-3" },
+  { en: "Finally, I check the result.", lesson: HOWDONE, fn: "Explaining a process", topics: ["Work processes"], block: "howdone-3" },
+  { en: "The whole process takes about an hour.", lesson: HOWDONE, fn: "Explaining a process", topics: ["Work processes"], block: "howdone-3" },
+  { en: "We do it every day.", lesson: HOWDONE, fn: "Explaining a process", topics: ["Work processes"], block: "howdone-3" },
+  { en: "I check it because a mistake can be dangerous.", lesson: HOWDONE, fn: "Giving reasons", topics: ["Work processes"], block: "howdone-3" },
+  { en: "I test it so that the customer is safe.", lesson: HOWDONE, fn: "Giving reasons", topics: ["Work processes"], block: "howdone-3" },
+  { en: "I do this to avoid mistakes.", lesson: HOWDONE, fn: "Giving reasons", topics: ["Work processes"], block: "howdone-3" },
+  // howdone-4
+  { en: "How do you do that?", lesson: HOWDONE, fn: "Asking about a process", topics: ["Work processes"], block: "howdone-4" },
+  { en: "How long does it take?", lesson: HOWDONE, fn: "Asking about a process", topics: ["Work processes"], block: "howdone-4" },
+  { en: "Why do you do that?", lesson: HOWDONE, fn: "Asking about a process", topics: ["Work processes"], block: "howdone-4" },
+  { en: "What happens next?", lesson: HOWDONE, fn: "Asking about a process", topics: ["Work processes"], block: "howdone-4" },
+  { en: "So first you..., and then you...?", lesson: HOWDONE, fn: "Checking that you understand", topics: ["Work processes"], block: "howdone-4" },
+  { en: "Let me check: is that right?", lesson: HOWDONE, fn: "Checking that you understand", topics: ["Work processes"], block: "howdone-4" },
+  { en: "Sorry, can you say that again?", lesson: HOWDONE, fn: "Checking that you understand", topics: ["Work processes"], block: "howdone-4" },
+  { en: "Do you mean the second step?", lesson: HOWDONE, fn: "Checking that you understand", topics: ["Work processes"], block: "howdone-4" },
+  { en: "That's right.", lesson: HOWDONE, fn: "Checking that you understand", topics: ["Work processes"], block: "howdone-4" },
+  { en: "Not exactly. First I...", lesson: HOWDONE, fn: "Checking that you understand", topics: ["Work processes"], block: "howdone-4" },
+  // howdone-5
+  { en: "Stop! You forgot to...", lesson: HOWDONE, fn: "Stopping a mistake", topics: ["Work processes", "Products and safety"], block: "howdone-5" },
+  { en: "Wait, shouldn't you... before...?", lesson: HOWDONE, fn: "Stopping a mistake", topics: ["Work processes", "Products and safety"], block: "howdone-5" },
+  { en: "You have to... first.", lesson: HOWDONE, fn: "Stopping a mistake", topics: ["Work processes", "Products and safety"], block: "howdone-5" },
+  { en: "That's the wrong order!", lesson: HOWDONE, fn: "Stopping a mistake", topics: ["Work processes", "Products and safety"], block: "howdone-5" },
+  { en: "If you don't..., you could...", lesson: HOWDONE, fn: "Talking about consequences", topics: ["Work processes", "Products and safety"], block: "howdone-5" },
+  { en: "Otherwise, ...", lesson: HOWDONE, fn: "Talking about consequences", topics: ["Work processes", "Products and safety"], block: "howdone-5" },
+  { en: "Yes, you're right. First I...", lesson: HOWDONE, fn: "Accepting a correction", topics: ["Work processes"], block: "howdone-5" },
+  { en: "Oh, sorry. I missed a step.", lesson: HOWDONE, fn: "Accepting a correction", topics: ["Work processes"], block: "howdone-5" },
+  // howdone-6
+  { en: "Before I start, I make sure that everything is ready.", lesson: HOWDONE, fn: "Explaining a process", topics: ["Work processes"], block: "howdone-6" },
+  { en: "Once it is finished, I check it again.", lesson: HOWDONE, fn: "Explaining a process", topics: ["Work processes"], block: "howdone-6" },
+  { en: "If there is a problem, I stop and call my boss.", lesson: HOWDONE, fn: "Explaining a process", topics: ["Work processes"], block: "howdone-6" },
+  { en: "That way we avoid mistakes.", lesson: HOWDONE, fn: "Explaining a process", topics: ["Work processes"], block: "howdone-6" },
+  { en: "It depends on the job.", lesson: HOWDONE, fn: "Explaining a process", topics: ["Work processes"], block: "howdone-6" },
+  // --- fin Show Me How It's Done ---
 ];
