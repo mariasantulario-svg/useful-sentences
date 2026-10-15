@@ -2591,22 +2591,22 @@ const LESSONS_DATA = [
     "min": 12,
     "timers": [
      [
-      "First listening",
-      1.5
-     ],
-     [
-      "Second listening",
-      1.5
+      "Answer in pairs",
+      3
      ],
      [
       "Write the steps",
+      3
+     ],
+     [
+      "Be the colleague",
       4
      ]
     ],
     "blocks": [
      {
       "type": "teacher",
-      "md": "**Objetivo:** comprensión de un proceso oral. **1.** Primera escucha: solo idea general. **2.** Segunda: las 8 preguntas. **3.** Cada uno escribe los cuatro pasos de un hablante de OTRO sector (el suyo ya lo ha ordenado en la 1). **4.** Plenario con la clave. **Clave:** 1 fuse box · 2 so that the customer is safe · 3 helmet and gloves · 4 so that the weld is strong · 5 when it is cold · 6 says hello, asks what they need · 7 some customers don't know what they want · 8 the receipt. Tiempos: Iker 20 min, Rubén 1 h, Carla 10 min por cliente."
+      "md": "**Objetivo:** comprensión de un proceso oral. **1.** Primera escucha: solo idea general. **2.** Segunda: las 8 preguntas. **3.** Nadie escribe: respuestas en parejas en voz alta y plenario con la clave. **4.** Be the colleague: cada uno cuenta en primera persona el proceso de un hablante de OTRO sector; el compañero dice qué falta. **Clave:** 1 fuse box · 2 so that the customer is safe · 3 helmet and gloves · 4 so that the weld is strong · 5 when it is cold · 6 says hello, asks what they need · 7 some customers don't know what they want · 8 the receipt. Tiempos: Iker 20 min, Rubén 1 h, Carla 10 min por cliente."
      },
      {
       "type": "text",
@@ -2631,7 +2631,7 @@ const LESSONS_DATA = [
      },
      {
       "type": "note",
-      "md": "Now choose a speaker from **another sector** and write their four steps: First / Then / After that / Finally. How long does it take?"
+      "md": "Answer out loud with your partner. Then choose a speaker from **another sector**, write their four steps on your worksheet and **be the colleague**: tell your partner the process in the first person: _I'm Rubén. First I..._ Your partner says what you forgot."
      },
      {
       "type": "reveal",
@@ -2760,6 +2760,75 @@ const LESSONS_DATA = [
     ]
    },
    {
+    "id": "9",
+    "title": "Stop! You forgot to...",
+    "min": 14,
+    "timers": [
+     [
+      "Round 1",
+      5
+     ],
+     [
+      "Round 2",
+      5
+     ],
+     [
+      "Best STOP",
+      3
+     ]
+    ],
+    "blocks": [
+     {
+      "type": "teacher",
+      "md": "**Objetivo:** detectar un paso que falta o un orden mal, y decir **por qué importa**. Cada pareja: una tarjeta del sector de A, el que lee (impresa, dos juegos, o en la app: los dos eligen el mismo código). A lee su lista con un error y no lo dice. B tiene la lista correcta, dice STOP, dice qué falla **y la consecuencia** (_If you don't..., you could..._). Segunda ronda con tarjeta nueva y roles cambiados. Cierre: cada pareja dice su mejor STOP en voz alta. **Claves:** W1 Falta el paso 1: helmet, gloves and jacket (EPI). · W2 Orden: se suelda antes de sujetar las piezas (pasos 3 y 4 cambiados). · W3 Falta el paso 5: check the weld when it is cold. · S1 Falta el paso 1: say hello and ask what the customer needs. · S2 Orden: se cobra antes de enseñar productos y explicar el precio (paso 4 en segundo lugar). · S3 Falta el paso 5: give the receipt. · E1 Falta el paso 1: switch off the power (seguridad). · E2 Orden: se da la corriente y se prueba antes de conectar el enchufe nuevo (pasos 4 y 5 cambiados). · E3 Falta el paso 2: take off the cover and check the wires with a voltage tester."
+     },
+     {
+      "type": "h",
+      "text": "Speak first"
+     },
+     {
+      "type": "questions",
+      "items": [
+       "Has a colleague ever made a mistake because **you** didn't explain the process well? What happened?"
+      ]
+     },
+     {
+      "type": "useful",
+      "blocks": [
+       "howdone-0"
+      ]
+     },
+     {
+      "type": "text",
+      "md": "**Student A** reads a list of steps. The list has a mistake: a step is missing or the order is wrong. Do not say which. **Student B** has the correct steps, listens and says **STOP**. Then B says **what is wrong and why it matters**. Change roles with a new card."
+     },
+     {
+      "type": "h",
+      "text": "Student A: pick your card"
+     },
+     {
+      "type": "choose",
+      "deck": "stopA",
+      "label": "Student A · choose the same code as your partner"
+     },
+     {
+      "type": "h",
+      "text": "Student B: pick the same card"
+     },
+     {
+      "type": "choose",
+      "deck": "stopB",
+      "label": "Student B · the correct list"
+     },
+     {
+      "type": "useful",
+      "blocks": [
+       "howdone-5"
+      ]
+     }
+    ]
+   },
+   {
     "id": "5",
     "title": "Prepare your process",
     "min": 18,
@@ -2776,7 +2845,7 @@ const LESSONS_DATA = [
     "blocks": [
      {
       "type": "teacher",
-      "md": "**Objetivo:** plantilla propia, no texto para leer. Mínimo cuatro pasos, un tiempo y una razón. Pueden tener la app abierta. Pasa por las mesas con vocabulario concreto. Quien acabe: ensaya en voz baja y cronometra con el móvil (¿cerca de un minuto?). **Después: descanso de 5 min.**"
+      "md": "**Objetivo:** plantilla propia, no texto para leer. Mínimo cuatro pasos, un tiempo y una razón. Pueden tener la app abierta. Pasa por las mesas con vocabulario concreto. Quien acabe: ensaya en voz baja y cronometra con el móvil (¿cerca de un minuto?)."
      },
      {
       "type": "h",
@@ -2915,75 +2984,6 @@ const LESSONS_DATA = [
      {
       "type": "text",
       "md": "Look at the board: three good phrases from today and two mistakes. Can you correct them?"
-     }
-    ]
-   },
-   {
-    "id": "9",
-    "title": "Stop! You forgot to...",
-    "min": 14,
-    "timers": [
-     [
-      "Round 1",
-      5
-     ],
-     [
-      "Round 2",
-      5
-     ],
-     [
-      "Best STOP",
-      3
-     ]
-    ],
-    "blocks": [
-     {
-      "type": "teacher",
-      "md": "**Objetivo:** detectar un paso que falta o un orden mal, y decir **por qué importa**. Cada pareja: una tarjeta del sector de A, el que lee (impresa, dos juegos, o en la app: los dos eligen el mismo código). A lee su lista con un error y no lo dice. B tiene la lista correcta, dice STOP, dice qué falla **y la consecuencia** (_If you don't..., you could..._). Segunda ronda con tarjeta nueva y roles cambiados. Cierre: cada pareja dice su mejor STOP en voz alta. **Claves:** W1 Falta el paso 1: helmet, gloves and jacket (EPI). · W2 Orden: se suelda antes de sujetar las piezas (pasos 3 y 4 cambiados). · W3 Falta el paso 5: check the weld when it is cold. · S1 Falta el paso 1: say hello and ask what the customer needs. · S2 Orden: se cobra antes de enseñar productos y explicar el precio (paso 4 en segundo lugar). · S3 Falta el paso 5: give the receipt. · E1 Falta el paso 1: switch off the power (seguridad). · E2 Orden: se da la corriente y se prueba antes de conectar el enchufe nuevo (pasos 4 y 5 cambiados). · E3 Falta el paso 2: take off the cover and check the wires with a voltage tester."
-     },
-     {
-      "type": "h",
-      "text": "Speak first"
-     },
-     {
-      "type": "questions",
-      "items": [
-       "Has a colleague ever made a mistake because **you** didn't explain the process well? What happened?"
-      ]
-     },
-     {
-      "type": "useful",
-      "blocks": [
-       "howdone-0"
-      ]
-     },
-     {
-      "type": "text",
-      "md": "**Student A** reads a list of steps. The list has a mistake: a step is missing or the order is wrong. Do not say which. **Student B** has the correct steps, listens and says **STOP**. Then B says **what is wrong and why it matters**. Change roles with a new card."
-     },
-     {
-      "type": "h",
-      "text": "Student A: pick your card"
-     },
-     {
-      "type": "choose",
-      "deck": "stopA",
-      "label": "Student A · choose the same code as your partner"
-     },
-     {
-      "type": "h",
-      "text": "Student B: pick the same card"
-     },
-     {
-      "type": "choose",
-      "deck": "stopB",
-      "label": "Student B · the correct list"
-     },
-     {
-      "type": "useful",
-      "blocks": [
-       "howdone-5"
-      ]
      }
     ]
    },
